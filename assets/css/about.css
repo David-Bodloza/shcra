@@ -160,3 +160,24 @@
     max-width: 30%;
   }
 }
+
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  padding: 0.6rem 1rem;
+  background-color: #2d6cdf;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: none; /* hidden by default */
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.3s ease;
+}
+
+#backToTop:hover {
+  background-color: #1f4cb2;
+}
