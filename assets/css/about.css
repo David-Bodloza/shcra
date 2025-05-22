@@ -1,0 +1,162 @@
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.about-hero {
+  background: linear-gradient(to right, #2d6cdf, #5a8dfc);
+  color: #fff;
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.about-section {
+  padding: 3rem 0;
+}
+
+.about-section.light {
+  background: #f8f9fd;
+}
+
+.about-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.about-flex.reverse {
+  flex-direction: column-reverse;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-img {
+  flex: 1;
+}
+
+.about-img img {
+  width: 100%;
+  border-radius: 1rem;
+  object-fit: cover;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  color: #2d6cdf;
+}
+
+.card-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+}
+
+.card {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.profile-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.profile-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 0.75rem;
+}
+
+.socials a {
+  margin: 0 0.5rem;
+  color: #2d6cdf;
+  font-size: 1.2rem;
+}
+
+.cta-section {
+  background: #2d6cdf;
+  color: white;
+  text-align: center;
+  padding: 3rem 1.5rem;
+}
+
+.cta-btn {
+  background: white;
+  color: #2d6cdf;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  display: inline-block;
+  font-weight: bold;
+}
+
+.footer {
+  background-color: #f0f4ff;
+  padding: 3rem 0;
+}
+
+.footer-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.footer-col h3 {
+  color: #2d6cdf;
+  margin-bottom: 0.75rem;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.footer-socials a {
+  color: #2d6cdf;
+  font-size: 1.4rem;
+}
+
+@media (min-width: 768px) {
+  .about-flex,
+  .about-flex.reverse {
+    flex-direction: row;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .profile-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-grid {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .footer-col {
+    max-width: 30%;
+  }
+}

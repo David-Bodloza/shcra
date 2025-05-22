@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>SHCRA | Team</title>
+    <!--bootstrap css-->
+    <!-- SHCRA css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="/assets/css/custom.css">
+    <link rel="stylesheet" href="/assets/css/team.css">
+
+</head>
+
+<body>
+
+    <header>
+
+        <nav>
+            <ul class="sidebar">
+                <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26"
+                            viewBox="0 96 960 960" width="26">
+                            <path
+                                d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z" />
+                        </svg></a></li>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/pages/about.html">About</a></li>
+                <li><a href="/pages/services.html">Services</a></li>
+                <li><a href="/" class="active">Team</a></li>
+                <li><a href="/pages/contact.html">Contact</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">
+                        <img src="/assets/img/logo.png" alt="" style="width: 100px;">
+                    </a></li>
+                <li class="hideOnMobile"><a href="/index.html">Home</a></li>
+                <li class="hideOnMobile"><a href="/pages/about.html">About</a></li>
+                <li class="hideOnMobile"><a href="/pages/services.html">Services</a></li>
+                <li class="hideOnMobile"><a href="/" class="active">Team</a></li>
+                <li class="hideOnMobile"><a href="/pages/contact.html">Contact</a></li>
+                <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg"
+                            height="26" viewBox="0 96 960 960" width="26">
+                            <path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z" />
+                        </svg></a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="team-page">
+        <div class="container">
+            <h1>Meet Our Team</h1>
+            <p>
+                Our dedicated team is committed to supporting refugees with compassion, faith, and practical help. Learn
+                more about the people behind the mission.
+            </p>
+
+            <div class="team-cards">
+                <div class="team-card">
+                    <img src="/assets/img/bg-img4.jpg" alt="John Doe" class="team-photo">
+                    <h3>John Doe</h3>
+                    <p>Founder & Director</p>
+                    <div class="team-social">
+                        <a href="#"><i class="fab fa-facebook-f" aria-label="Facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter" aria-label="Twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube" aria-label="YouTube"></i></a>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <img src="/assets/img/bg.jpg" alt="Jane Smith" class="team-photo">
+                    <h3>Jane Smith</h3>
+                    <p>Program Coordinator</p>
+                    <div class="team-social">
+                        <a href="#"><i class="fab fa-facebook-f" aria-label="Facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter" aria-label="Twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube" aria-label="YouTube"></i></a>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <img src="/assets/img/refs.png" alt="Michael Brown" class="team-photo">
+                    <h3>Michael Brown</h3>
+                    <p>Community Outreach</p>
+                    <div class="team-social">
+                        <a href="#"><i class="fab fa-facebook-f" aria-label="Facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter" aria-label="Twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube" aria-label="YouTube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section about">
+                    <h3>About Us</h3>
+                    <p>We are a Christian refugee association dedicated to serving displaced families with faith, love,
+                        and support rooted in the Gospel.</p>
+                </div>
+
+                <div class="footer-section contact">
+                    <h3>Contact Us</h3>
+                    <p>Email: support@refugeefaith.org</p>
+                    <p>Phone: +123 456 7890</p>
+                </div>
+
+                <div class="footer-section follow">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f" aria-label="Facebook"></i></a>
+                        <a href="#"><i class="fab fa-youtube" aria-label="YouTube"></i></a>
+                        <a href="#"><i class="fab fa-twitter" aria-label="Twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script>
+        function showSidebar() {
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'flex'
+        }
+        function hideSidebar() {
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none'
+        }
+    </script>
+</body>
+
+</html>
