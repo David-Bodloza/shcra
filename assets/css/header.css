@@ -22,6 +22,7 @@ a.active {
   color: #2d6cdf;
   letter-spacing: 0.5rem;
   font-family: cursive;
+  margin-bottom: 1em;
 
   span {
     font-size: 2.4rem;
