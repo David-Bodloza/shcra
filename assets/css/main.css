@@ -4,79 +4,57 @@
   box-sizing: border-box;
 }
 html {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-size: 18px;
+  font-family: monospace;
+  font-size: 1rem;
 }
-
-/* Container (reusable) */
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
-}
-
-/* Hero Section */
-.home-hero {
-  background: url("/assets/img/bg.jpg") no-repeat center center/cover;
-  height: 100vh;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Dark Overlay */
-.hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
+#hero {
   width: 100%;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.445), rgba(0, 0, 0, 0.441)),
+    url(/assets/img/bg-img4.jpg) no-repeat center/ contain;
+  color: #fff;
+}
+.container {
+  width: 90%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  max-width: 1000px;
+  margin: 0 auto;
+  /*A technique to center align anything*/
   display: flex;
-  align-items: center;
   justify-content: center;
-}
-
-/* Content */
-.hero-content {
+  align-items: center;
   text-align: center;
-  color: white;
-  z-index: 1;
+}
+.info h1 {
+  font-size: 3rem;
+  margin-bottom: 1em;
+}
+.info p {
+  font-size: 1.3rem;
+  max-width: 80%;
+  margin: 0 auto;
 }
 
-.hero-content h1 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.hero-content p {
-  font-size: 1.1rem;
-  margin-bottom: 2rem;
-  max-width: 600px;
-  margin-inline: auto;
-}
-
-.cta-btn {
-  background: #ffffff;
-  color: #2d6cdf;
-  padding: 0.75rem 1.5rem;
-  border-radius: 0.5rem;
-  font-weight: bold;
+.info .btn {
   text-decoration: none;
-  transition: background 0.3s ease;
-}
+  display: inline-block;
+  background-color: #770000;
+  border-radius: 10px;
+  padding: 1em 2em;
+  color: #fff;
+  margin-top: 2em;
+  font-size: 1.2rem;
 
-.cta-btn:hover {
-  background: #e0e0e0;
-}
-
-@media (min-width: 768px) {
-  .hero-content h1 {
-    font-size: 3rem;
+  &:hover {
+    background: #7e4300;
   }
+}
 
-  .hero-content p {
-    font-size: 1.25rem;
+@media (max-width: 768px) {
+  html {
+    font-size: 0.8rem;
+  }
+  .info p {
+    font-weight: 700;
   }
 }

@@ -2,45 +2,47 @@
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>SHCRA | Team</title>
     <!--bootstrap css-->
     <!-- SHCRA css-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <link rel="stylesheet" href="/assets/css/custom.css">
+    <link rel="stylesheet" href="/assets/css/header.css">
     <link rel="stylesheet" href="/assets/css/team.css">
 
 </head>
 
 <body>
 
-    <header>
+    <header class="site-header">
+        <div class="container header-content">
+            <h1 class="logo">SHCRA<span>.</span></h1>
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/pages/about.html">About</a></li>
+                    <li><a href="#" class="active">Services</a></li>
+                    <li><a href="/pages/team.html">Team</a></li>
+                    <li><a href="/pages/contact.html">Contact</a></li>
+                </ul>
+            </nav>
 
-        <nav>
-            <ul class="sidebar">
-                <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26"
-                            viewBox="0 96 960 960" width="26">
-                            <path
-                                d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z" />
-                        </svg></a></li>
+            <!-- Hamburger Button -->
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <nav class="mobile-nav" id="mobileNav">
+            <ul>
                 <li><a href="/index.html">Home</a></li>
                 <li><a href="/pages/about.html">About</a></li>
                 <li><a href="/pages/services.html">Services</a></li>
-                <li><a href="/" class="active">Team</a></li>
+                <li><a href="/pages/team.html" class="active">Team</a></li>
                 <li><a href="/pages/contact.html">Contact</a></li>
-            </ul>
-            <ul>
-                <li><a href="#">
-                        <img src="/assets/img/logo.png" alt="" style="width: 100px;">
-                    </a></li>
-                <li class="hideOnMobile"><a href="/index.html">Home</a></li>
-                <li class="hideOnMobile"><a href="/pages/about.html">About</a></li>
-                <li class="hideOnMobile"><a href="/pages/services.html">Services</a></li>
-                <li class="hideOnMobile"><a href="/" class="active">Team</a></li>
-                <li class="hideOnMobile"><a href="/pages/contact.html">Contact</a></li>
-                <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg"
-                            height="26" viewBox="0 96 960 960" width="26">
-                            <path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z" />
-                        </svg></a></li>
             </ul>
         </nav>
     </header>
@@ -123,15 +125,13 @@
     </button>
 
     <script>
-        function showSidebar() {
-            const sidebar = document.querySelector('.sidebar')
-            sidebar.style.display = 'flex'
-        }
-        function hideSidebar() {
-            const sidebar = document.querySelector('.sidebar')
-            sidebar.style.display = 'none'
-        }
+        const hamburger = document.getElementById('hamburger');
+        const mobileNav = document.getElementById('mobileNav');
 
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('open');
+            mobileNav.classList.toggle('open');
+        });
 
         const backToTopBtn = document.getElementById("backToTop");
 
