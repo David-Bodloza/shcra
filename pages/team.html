@@ -15,108 +15,142 @@
 </head>
 
 <body>
+    <div class="wrapper">
 
-    <header class="site-header">
-        <div class="container header-content">
-            <h1 class="logo">SHCRA<span>.</span></h1>
-            <nav class="desktop-nav">
+        <header class="site-header">
+            <div class="container header-content">
+                <h1 class="logo">SHCRA<span>.</span></h1>
+                <nav class="desktop-nav">
+                    <ul>
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="/pages/about.html">About</a></li>
+                        <li><a href="#" class="active">Services</a></li>
+                        <li><a href="/pages/team.html">Team</a></li>
+                        <li><a href="/pages/contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Hamburger Button -->
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <nav class="mobile-nav" id="mobileNav">
                 <ul>
                     <li><a href="/index.html">Home</a></li>
                     <li><a href="/pages/about.html">About</a></li>
-                    <li><a href="#" class="active">Services</a></li>
-                    <li><a href="/pages/team.html">Team</a></li>
+                    <li><a href="/pages/services.html">Services</a></li>
+                    <li><a href="/pages/team.html" class="active">Team</a></li>
                     <li><a href="/pages/contact.html">Contact</a></li>
                 </ul>
             </nav>
+        </header>
+        <section class="team-page">
+            <div class="container">
+                <h1>Meet Our Team</h1>
+                <p>
+                    Our dedicated team is committed to supporting refugees with compassion, faith, and practical help.
+                    Learn
+                    more about the people behind the mission.
+                </p>
 
-            <!-- Hamburger Button -->
-            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-                <span></span><span></span><span></span>
-            </button>
-        </div>
-
-        <!-- Mobile Menu -->
-        <nav class="mobile-nav" id="mobileNav">
-            <ul>
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/pages/about.html">About</a></li>
-                <li><a href="/pages/services.html">Services</a></li>
-                <li><a href="/pages/team.html" class="active">Team</a></li>
-                <li><a href="/pages/contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <section class="team-page">
-        <div class="container">
-            <h1>Meet Our Team</h1>
-            <p>
-                Our dedicated team is committed to supporting refugees with compassion, faith, and practical help. Learn
-                more about the people behind the mission.
-            </p>
-
-            <div class="team-cards">
-                <div class="team-card">
-                    <img src="/assets/img/bg-img4.jpg" alt="John Doe" class="team-photo">
-                    <h3>John Doe</h3>
-                    <p>Founder & Director</p>
-                    <div class="team-social">
-                        <a href="#"><i class="fab fa-facebook-f" aria-label="Facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter" aria-label="Twitter"></i></a>
-                        <a href="#"><i class="fab fa-youtube" aria-label="YouTube"></i></a>
+                <div class="team-cards">
+                    <div class="team-card">
+                        <img src="/assets/img/Lukozi B. awardee.jpg" alt="John Doe" class="team-photo">
+                        <h3>Lukozi Bulimwengo</h3>
+                        <p>Founder & Director</p>
+                        <div class="team-social">
+                            <a href="#"><i class="fab fa-facebook-f" aria-label="Facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter" aria-label="Twitter"></i></a>
+                            <a href="#"><i class="fab fa-youtube" aria-label="YouTube"></i></a>
+                        </div>
                     </div>
-                </div>
 
-                <div class="team-card">
-                    <img src="/assets/img/bg.jpg" alt="Jane Smith" class="team-photo">
-                    <h3>Jane Smith</h3>
-                    <p>Program Coordinator</p>
-                    <div class="team-social">
-                        <a href="#"><i class="fab fa-facebook-f" aria-label="Facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter" aria-label="Twitter"></i></a>
-                        <a href="#"><i class="fab fa-youtube" aria-label="YouTube"></i></a>
+                    <div class="team-card">
+                        <img src="/assets/img/IMG-20230301-WA0124.jpg" alt="Jane Smith" class="team-photo">
+                        <h3>Jane Smith</h3>
+                        <p>Program Coordinator</p>
+                        <div class="team-social">
+                            <a href="#"><i class="fab fa-facebook-f" aria-label="Facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter" aria-label="Twitter"></i></a>
+                            <a href="#"><i class="fab fa-youtube" aria-label="YouTube"></i></a>
+                        </div>
                     </div>
-                </div>
 
-                <div class="team-card">
-                    <img src="/assets/img/refs.png" alt="Michael Brown" class="team-photo">
-                    <h3>Michael Brown</h3>
-                    <p>Community Outreach</p>
-                    <div class="team-social">
-                        <a href="#"><i class="fab fa-facebook-f" aria-label="Facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter" aria-label="Twitter"></i></a>
-                        <a href="#"><i class="fab fa-youtube" aria-label="YouTube"></i></a>
+                    <div class="team-card">
+                        <img src="/assets/img/DTS Graduattion.JPG" alt="Michael Brown" class="team-photo">
+                        <h3>Michael Brown</h3>
+                        <p>Community Outreach</p>
+                        <div class="team-social">
+                            <a href="#"><i class="fab fa-facebook-f" aria-label="Facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter" aria-label="Twitter"></i></a>
+                            <a href="#"><i class="fab fa-youtube" aria-label="YouTube"></i></a>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="site-footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-section about">
-                    <h3>About Us</h3>
-                    <p>We are a Christian refugee association dedicated to serving displaced families with faith, love,
-                        and support rooted in the Gospel.</p>
-                </div>
-
-                <div class="footer-section contact">
-                    <h3>Contact Us</h3>
-                    <p>Email: support@refugeefaith.org</p>
-                    <p>Phone: +123 456 7890</p>
-                </div>
-
-                <div class="footer-section follow">
-                    <h3>Follow Us</h3>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook-f" aria-label="Facebook"></i></a>
-                        <a href="#"><i class="fab fa-youtube" aria-label="YouTube"></i></a>
-                        <a href="#"><i class="fab fa-twitter" aria-label="Twitter"></i></a>
+                    <div class="team-card">
+                        <img src="/assets/img/DTS Graduattion.JPG" alt="Michael Brown" class="team-photo">
+                        <h3>Michael Brown</h3>
+                        <p>Community Outreach</p>
+                        <div class="team-social">
+                            <a href="#"><i class="fab fa-facebook-f" aria-label="Facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter" aria-label="Twitter"></i></a>
+                            <a href="#"><i class="fab fa-youtube" aria-label="YouTube"></i></a>
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <img src="/assets/img/DTS Graduattion.JPG" alt="Michael Brown" class="team-photo">
+                        <h3>Michael Brown</h3>
+                        <p>Community Outreach</p>
+                        <div class="team-social">
+                            <a href="#"><i class="fab fa-facebook-f" aria-label="Facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter" aria-label="Twitter"></i></a>
+                            <a href="#"><i class="fab fa-youtube" aria-label="YouTube"></i></a>
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <img src="/assets/img/DTS Graduattion.JPG" alt="Michael Brown" class="team-photo">
+                        <h3>Michael Brown</h3>
+                        <p>Community Outreach</p>
+                        <div class="team-social">
+                            <a href="#"><i class="fab fa-facebook-f" aria-label="Facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter" aria-label="Twitter"></i></a>
+                            <a href="#"><i class="fab fa-youtube" aria-label="YouTube"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </footer>
+        </section>
+
+        <footer class="site-footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-section about">
+                        <h3>About Us</h3>
+                        <p>We are a Christian refugee association dedicated to serving displaced families with faith,
+                            love,
+                            and support rooted in the Gospel.</p>
+                    </div>
+
+                    <div class="footer-section contact">
+                        <h3>Contact Us</h3>
+                        <p>Email: support@refugeefaith.org</p>
+                        <p>Phone: +123 456 7890</p>
+                    </div>
+
+                    <div class="footer-section follow">
+                        <h3>Follow Us</h3>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-facebook-f" aria-label="Facebook"></i></a>
+                            <a href="#"><i class="fab fa-youtube" aria-label="YouTube"></i></a>
+                            <a href="#"><i class="fab fa-twitter" aria-label="Twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
 
 
     <!-- Back to Top Button -->

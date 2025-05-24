@@ -11,6 +11,11 @@ body {
   color: #222;
   padding: 2em;
 }
+.wrapper {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+}
 .team-page {
   background-color: #f0f4ff; /* matching other sections */
   padding: 3rem 1.5rem;
@@ -34,8 +39,8 @@ body {
 }
 
 .team-cards {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 2rem;
 }
 
@@ -78,13 +83,7 @@ body {
   }
 
   .team-cards {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .team-card {
-    flex: 1;
-    max-width: 30%;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
