@@ -4,21 +4,194 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SHCRA | Home</title>
+    <title>SHCRA - Home</title>
     <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
-    <!-- Hero Section -->
-    <section id="hero">
-        <div class="container">
-            <div class="info">
 
-                <p>We provide support, services, and guidance to refugees and local community in need. </p>
-                <a href="/pages/about.html" class="btn">Find Out More</a>
+    <header class="main-header">
+        <div class="container header-inner">
+            <div class="logo">
+                <a href="index.html">SCHRA</a>
+            </div>
+            <nav class="main-nav" id="desktop-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger-menu" id="hamburger-menu" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i> </button>
+            <a href="donate.html" class="btn btn-donate header-donate-btn">Donate Now</a>
+        </div>
+    </header>
+
+    <div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
+    <nav class="mobile-nav-sidebar" id="mobile-nav-sidebar">
+        <button class="close-sidebar" id="close-sidebar" aria-label="Close navigation">
+            <i class="fas fa-times"></i> </button>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="donate.html" class="btn btn-donate">Donate Now</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-content container">
+                <h1>Self Help Christian Refugees Association</h1>
+                <p>Supporting Christian refugees with compassion, community, and vital resources.</p>
+                <div class="hero-buttons">
+                    <a href="about.html" class="btn btn-primary">Learn More</a>
+                    <a href="donate.html" class="btn btn-donate">Donate Today</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="mission-section">
+            <div class="container">
+                <h2 class="section-title">Our Mission</h2>
+                <div class="mission-content">
+                    <p>The Christian Refugees Aid is dedicated to assisting Christian refugees who have fled
+                        persecution, offering comprehensive support, community integration, and spiritual guidance to
+                        help them rebuild their lives in safety and dignity.</p>
+                    <p>We believe in the power of faith and community to heal and empower. Our commitment is to walk
+                        alongside those displaced, providing a beacon of hope in their journey towards a brighter
+                        future.</p>
+                    <a href="about.html" class="btn btn-secondary">Discover Our Story</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="services-home-section">
+            <div class="container">
+                <h2 class="section-title">How We Help</h2>
+                <p class="section-description">Comprehensive support tailored to individual needs.</p>
+                <div class="service-cards-grid">
+                    <div class="service-card">
+                        <i class="fas fa-gavel icon-large"></i>
+                        <h3>Legal Assistance</h3>
+                        <p>Navigating asylum processes, legal documentation, and advocacy for rights.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-users icon-large"></i>
+                        <h3>Community Integration</h3>
+                        <p>Language classes, cultural orientation, and social activities to foster belonging.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-church icon-large"></i>
+                        <h3>Spiritual Guidance</h3>
+                        <p>Pastoral care, Bible studies, and connections to local Christian communities.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-hand-holding-heart icon-large"></i>
+                        <h3>Humanitarian Aid</h3>
+                        <p>Food, shelter, medical assistance, and emergency relief supplies.</p>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <a href="services.html" class="btn btn-primary">View All Services</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="impact-section">
+            <div class="container">
+                <h2 class="section-title white-text">Our Impact in Action</h2>
+                <p class="section-description white-text">Witness the stories of lives transformed by your generosity
+                    and support.</p>
+                <div class="impact-gallery">
+                    <div class="impact-item">
+                        <img src="images/impact-1.jpg" alt="Refugee family smiling">
+                        <div class="impact-overlay">
+                            <h3>New Beginnings</h3>
+                            <p>Families finding safety and hope.</p>
+                        </div>
+                    </div>
+                    <div class="impact-item">
+                        <img src="images/impact-2.jpg" alt="Children learning in a classroom">
+                        <div class="impact-overlay">
+                            <h3>Education & Growth</h3>
+                            <p>Children accessing learning opportunities.</p>
+                        </div>
+                    </div>
+                    <div class="impact-item">
+                        <img src="images/impact-3.jpg" alt="Community support group gathering">
+                        <div class="impact-overlay">
+                            <h3>Stronger Communities</h3>
+                            <p>Building bonds and shared experiences.</p>
+                        </div>
+                    </div>
+                    <div class="impact-item">
+                        <img src="images/impact-4.jpg" alt="Adult receiving aid package">
+                        <div class="impact-overlay">
+                            <h3>Empowerment</h3>
+                            <p>Adults gaining skills and independence.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <a href="about.html" class="btn btn-donate">See More Impact Stories</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-bottom-section">
+            <div class="container text-center">
+                <h2 class="section-title white-text">Your Compassion Makes a Difference</h2>
+                <p class="section-description white-text">Every donation, every volunteer hour, helps us extend a hand
+                    of hope.</p>
+                <a href="#" class="btn btn-donate btn-large">Support Our Cause Today!</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <div class="footer-col">
+                <h3>Self Help Christian Refugees Association</h3>
+                <p>Providing holistic support to Christian refugees globally.</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Connect With Us</h4>
+                <div class="social-media">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+                <p class="contact-info">Email: infoshcra.org@gmail.com</p>
+                <p class="contact-info">Phone: +1 (123) 456-7890</p>
             </div>
         </div>
-    </section>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025 Christian Refugees Aid. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="scrollToTopBtn" class="scroll-to-top" title="Go to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
+
+<script src="/assets/js/main.js"></script>
 </body>
 
 </html>

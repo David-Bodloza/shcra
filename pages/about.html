@@ -4,214 +4,313 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>SHCRA | About</title>
-    <!--bootstrap css-->
-    <!-- SHCRA css-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <link rel="stylesheet" href="/assets/css/header.css">
+    <title>Christian Refugees Aid - About Us</title>
+    <link rel="stylesheet" href="/assets/css/main.css">
     <link rel="stylesheet" href="/assets/css/about.css">
-
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
-    <header class="site-header">
-        <div class="container header-content">
-            <h1 class="logo">SHCRA<span>.</span></h1>
-            <nav class="desktop-nav">
+
+    <header class="main-header">
+        <div class="container header-inner">
+            <div class="logo">
+                <a href="index.html">Christian Refugees Aid</a>
+            </div>
+            <nav class="main-nav" id="desktop-nav">
                 <ul>
-                    <li><a href="/index.html">Home</a></li>
-                    <li><a href="#" class="active">About</a></li>
-                    <li><a href="/pages/services.html">Services</a></li>
-                    <li><a href="/pages/team.html">Team</a></li>
-                    <li><a href="/pages/contact.html">Contact</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
-
-            <!-- Hamburger Button -->
-            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-                <span></span><span></span><span></span>
+            <button class="hamburger-menu" id="hamburger-menu" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
             </button>
+            <a href="donate.html" class="btn btn-donate header-donate-btn">Donate Now</a>
         </div>
-
-        <!-- Mobile Menu -->
-        <nav class="mobile-nav" id="mobileNav">
-            <ul>
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="#" class="active">About</a></li>
-                <li><a href="/pages/services.html">Services</a></li>
-                <li><a href="/pages/team.html">Team</a></li>
-                <li><a href="/pages/contact.html">Contact</a></li>
-            </ul>
-        </nav>
     </header>
 
+    <div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
+    <nav class="mobile-nav-sidebar" id="mobile-nav-sidebar">
+        <button class="close-sidebar" id="close-sidebar" aria-label="Close navigation">
+            <i class="fas fa-times"></i>
+        </button>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="donate.html" class="btn btn-donate">Donate Now</a></li>
+        </ul>
+    </nav>
+
     <main>
-        <!-- HERO SECTION (in container) -->
-        <section class="hero about-hero">
-            <div class="overlay">
-                <div class="container">
-                    <h1>Self Help Christian Refugees Association</h1>
-                    <p>Empowers disadvantaged and people in need with hope, dignity, and opportunity through
-                        training and emotional support.
-                    </p>
+        <section class="page-hero">
+            <div class="container">
+                <h1>About Christian Refugees Aid</h1>
+                <p>Our journey of compassion and commitment.</p>
+            </div>
+        </section>
 
+        <section class="intro-section">
+            <div class="container">
+                <h2 class="section-title"> Our Vision</h2>
+                <p class="section-description">Founded with a deep commitment to faith and humanity, Christian Refugees
+                    Aid began with a simple yet profound vision: to offer solace and support to those fleeing
+                    persecution for their beliefs.</p>
+                <p>We believe that every individual deserves safety, dignity, and the opportunity to rebuild their life,
+                    regardless of their background. Our work is driven by compassion, guided by Christian principles,
+                    and empowered by a global community of supporters and volunteers.</p>
+                <p>From humble beginnings, we've grown into a robust network providing legal, humanitarian, and
+                    spiritual assistance to thousands. Our vision extends beyond immediate aid; we strive to foster
+                    lasting integration, self-sufficiency, and hope for a brighter future.</p>
+            </div>
+        </section>
+
+        <section class="story-section">
+            <div class="container">
+                <h2 class="section-title">Our Journey & Milestones</h2>
+
+                <div class="story-item">
+                    <div class="story-image">
+                        <img src="images/story-1.jpg" alt="Team discussing plans">
+                    </div>
+                    <div class="story-content">
+                        <h3>The Genesis of Compassion</h3>
+                        <p>In 2015, driven by the escalating refugee crisis, a small group of committed individuals came
+                            together with a shared faith and an urgent desire to help. This marked the informal
+                            beginning of Christian Refugees Aid, operating initially as a grassroots volunteer effort.
+                        </p>
+                        <ul>
+                            <li>Informal volunteer network established.</li>
+                            <li>Initial focus on direct humanitarian aid.</li>
+                            <li>Community support meetings began.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="story-item reverse">
+                    <div class="story-image">
+                        <img src="images/story-2.jpg" alt="Volunteer helping a refugee family">
+                    </div>
+                    <div class="story-content">
+                        <h3>Formalization and Expansion</h3>
+                        <p>Recognizing the growing need, Christian Refugees Aid officially registered as a non-profit
+                            organization in 2017. This allowed for greater fundraising capabilities, expanded
+                            partnerships, and the ability to offer more structured programs, including initial legal aid
+                            clinics.</p>
+                        <ul>
+                            <li>Official non-profit registration achieved.</li>
+                            <li>Partnerships with local churches and NGOs.</li>
+                            <li>Launched first legal aid program.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="story-item">
+                    <div class="story-image">
+                        <img src="images/story-3.jpg" alt="Community members celebrating">
+                    </div>
+                    <div class="story-content">
+                        <h3>Building a Future of Hope</h3>
+                        <p>Today, we proudly serve as a vital lifeline for countless Christian refugees, offering
+                            comprehensive integration programs, robust spiritual support, and ongoing humanitarian
+                            assistance. Our commitment to empowering individuals and fostering resilient communities
+                            remains unwavering.</p>
+                        <ul>
+                            <li>Expanded to international partnerships.</li>
+                            <li>Launched vocational training initiatives.</li>
+                            <li>Advocacy for refugee rights on a global scale.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="impact-section">
+            <div class="container">
+                <h2 class="section-title white-text">Our Impact in Action</h2>
+                <p class="section-description white-text">Witness the stories of lives transformed by your generosity
+                    and support. Each picture represents a step towards a new beginning.</p>
+                <div class="impact-gallery">
+                    <div class="impact-item">
+                        <img src="images/impact-1.jpg" alt="Refugee family smiling">
+                        <div class="impact-overlay">
+                            <h3>New Beginnings</h3>
+                            <p>Families finding safety and hope.</p>
+                        </div>
+                    </div>
+                    <div class="impact-item">
+                        <img src="images/impact-2.jpg" alt="Children learning in a classroom">
+                        <div class="impact-overlay">
+                            <h3>Education & Growth</h3>
+                            <p>Children accessing learning opportunities.</p>
+                        </div>
+                    </div>
+                    <div class="impact-item">
+                        <img src="images/impact-3.jpg" alt="Community support group gathering">
+                        <div class="impact-overlay">
+                            <h3>Stronger Communities</h3>
+                            <p>Building bonds and shared experiences.</p>
+                        </div>
+                    </div>
+                    <div class="impact-item">
+                        <img src="images/impact-4.jpg" alt="Adult receiving aid package">
+                        <div class="impact-overlay">
+                            <h3>Empowerment</h3>
+                            <p>Adults gaining skills and independence.</p>
+                        </div>
+                    </div>
+                    <div class="impact-item">
+                        <img src="images/impact-5.jpg" alt="Volunteer providing aid">
+                        <div class="impact-overlay">
+                            <h3>Dedicated Volunteers</h3>
+                            <p>The compassionate hearts behind our work.</p>
+                        </div>
+                    </div>
+                    <div class="impact-item">
+                        <img src="images/impact-6.jpg" alt="Refugee receiving vocational training">
+                        <div class="impact-overlay">
+                            <h3>Skills for Life</h3>
+                            <p>Equipping individuals for future success.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- SERVICES SECTION 
-        <section id="services" class="about-services">
+        <section class="photo-gallery-section">
             <div class="container">
-                <h2 class="section-heading">Our Key Services</h2>
-                <div class="services-grid">
-                    <div class="service-card">
-                        <img src="/assets/img/Anti - Xenophobia Campain at Orchard Primary School 2.jpg"
-                            alt="Shelter" />
-                        <h3>Shelter</h3>
-                        <p>Temporary housing for displaced families to find safety and rest.</p>
-                        <a href="#" class="btn-learn">Learn More</a>
+                <h2 class="section-title">Moments of Hope & Connection</h2>
+                <p class="section-description">A visual journey through the lives we touch and the communities we build.
+                </p>
+                <div class="photo-grid">
+                    <div class="gallery-item">
+                        <img src="images/gallery-1.jpg" alt="Smiling children in a new environment">
                     </div>
-                    <div class="service-card">
-                        <img src="/assets/img/bg-img4.jpg" alt="Education" />
-                        <h3>Education</h3>
-                        <p>Faith-based educational support to help refugees rebuild and grow.</p>
-                        <a href="#" class="btn-learn">Learn More</a>
+                    <div class="gallery-item">
+                        <img src="images/gallery-2.jpg" alt="Community gathering, sharing food">
                     </div>
-                    <div class="service-card">
-                        <img src="/assets/img/bg-img4.jpg" alt="Counseling" />
-                        <h3>Counseling</h3>
-                        <p>Spiritual and emotional care to heal trauma and build resilience.</p>
-                        <a href="#" class="btn-learn">Learn More</a>
+                    <div class="gallery-item">
+                        <img src="images/gallery-3.jpg" alt="Elderly person receiving comfort">
                     </div>
-                    <div class="service-card">
-                        <img src="/assets/img/bg-img4.jpg" alt="Counseling" />
-                        <h3>Counseling</h3>
-                        <p>Spiritual and emotional care to heal trauma and build resilience.</p>
-                        <a href="#" class="btn-learn">Learn More</a>
+                    <div class="gallery-item">
+                        <img src="images/gallery-4.jpg" alt="Volunteers working together">
                     </div>
-                    <div class="service-card">
-                        <img src="/assets/img/bg-img4.jpg" alt="Counseling" />
-                        <h3>Counseling</h3>
-                        <p>Spiritual and emotional care to heal trauma and build resilience.</p>
-                        <a href="#" class="btn-learn">Learn More</a>
+                    <div class="gallery-item">
+                        <img src="images/gallery-5.jpg" alt="Children playing in a safe space">
                     </div>
-                    <div class="service-card">
-                        <img src="/assets/img/bg-img4.jpg" alt="Counseling" />
-                        <h3>Counseling</h3>
-                        <p>Spiritual and emotional care to heal trauma and build resilience.</p>
-                        <a href="#" class="btn-learn">Learn More</a>
+                    <div class="gallery-item">
+                        <img src="images/gallery-6.jpg" alt="Adults learning a new skill">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/gallery-7.jpg" alt="Group praying together">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/gallery-8.jpg" alt="Aid supplies being delivered">
                     </div>
                 </div>
             </div>
-        </section>-->
-
-
-        <section class="about-overview">
-            <div class="container">
-                <p style="margin-top: 2em;">Our association is dedicated to serving refugees with love, compassion, and
-                    practical care. We
-                    believe every person deserves dignity and a new beginning.</p>
-
-                <p>Rooted in both local and refugee communities values, we walk alongside those displaced by conflict
-                    and hardship,
-                    offering
-                    spiritual guidance, shelter, education, and emotional support.</p>
-            </div>
         </section>
 
-        <section class="about-values">
+        <section class="values-section">
             <div class="container">
+                <h2 class="section-title white-text">Our Guiding Values</h2>
+                <p class="section-description white-text">These principles illuminate our path and define every action
+                    we take.</p>
                 <div class="values-grid">
                     <div class="value-card">
-                        <img src="/assets/img/DT Graduattion.JPG" alt="Mission" />
-                        <h3>Vision</h3>
-                        <p>
-                            To help needy and disadvantaged people, refugees and local communities
-                            to sustain themselves.
-                        </p>
+                        <i class="fas fa-heart icon-medium"></i>
+                        <h3>Compassion</h3>
+                        <p>Leading with empathy and understanding for all those we serve.</p>
                     </div>
                     <div class="value-card">
-                        <img src="/assets/img/FooVege Distr1.jpg" alt="Vision" />
-                        <h3>Mission</h3>
-                        <p>
-                            To assist, train and inform refugees and local community members so
-                            that they can become self-sufficient.
-                        </p>
+                        <i class="fas fa-hand-holding-heart icon-medium"></i>
+                        <h3>Service</h3>
+                        <p>Dedicated to practical aid and unwavering support for refugees.</p>
                     </div>
                     <div class="value-card">
-                        <img src="/assets/img/refs.p" alt="Values" />
-                        <h3>Objectives</h3>
-                        <p>
-                            To facilitate a peaceful integration of refugees in South African community
-                            and also improve the socio-economic living conditions of needy people, regardless
-                            of religion, race, sex, tribe, nationalities or ethnic groups.
-                        </p>
+                        <i class="fas fa-cross icon-medium"></i>
+                        <h3>Faith</h3>
+                        <p>Rooted in Christian principles, offering hope and spiritual care.</p>
+                    </div>
+                    <div class="value-card">
+                        <i class="fas fa-users icon-medium"></i>
+                        <h3>Community</h3>
+                        <p>Building strong, supportive networks for integration and belonging.</p>
+                    </div>
+                    <div class="value-card">
+                        <i class="fas fa-gavel icon-medium"></i>
+                        <h3>Justice</h3>
+                        <p>Advocating for the rights and dignity of displaced individuals.</p>
+                    </div>
+                    <div class="value-card">
+                        <i class="fas fa-seedling icon-medium"></i>
+                        <h3>Empowerment</h3>
+                        <p>Fostering self-sufficiency and skills for a brighter future.</p>
                     </div>
                 </div>
             </div>
         </section>
+
+        <section class="team-preview-section">
+            <div class="container text-center">
+                <h2 class="section-title">Meet Our Dedicated Team</h2>
+                <p class="section-description">Our passion comes from the incredible individuals who dedicate their time
+                    and talent to our mission.</p>
+                <a href="team.html" class="btn btn-primary">See Our Team</a>
+            </div>
+        </section>
+
+        <section class="cta-contact-section">
+            <div class="container text-center">
+                <h2 class="section-title white-text">Ready to Connect?</h2>
+                <p class="section-description white-text">Whether you have questions, want to volunteer, or simply wish
+                    to learn more, we're here to help.</p>
+                <a href="contact.html" class="btn btn-secondary btn-large">Get In Touch</a>
+            </div>
+        </section>
+
     </main>
 
-    <footer class="site-footer">
-        <div class="container footer-grid">
-            <div>
-                <h4>About Us</h4>
-                <p>We are a refugee association supporting both local and refugees through love, dignity, and practical
-                    services.</p>
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <div class="footer-col">
+                <h3>Christian Refugees Aid</h3>
+                <p>Providing holistic support to Christian refugees globally.</p>
             </div>
-            <div>
-                <h4>Contact Us</h4>
-                <p>Email: infoshcra.org@gmail.com</p>
-                <p>Phone: +27 78 425 1650</p>
-                <p>Address: 9 Frances Street, Yeovile, Johannesburg, 2198, South Africa </p>
-            </div>
-            <div>
-                <h4>Follow Us</h4>
-                <div class="social-icons">
-                    <a
-                        href="https://web.facebook.com/people/SHCRA-Self-Help-Christian-Refugees-Association/61575988463472/?_rdc=1&_rdr"><i
-                            class="fab fa-facebook-f"></i></a>
-                    <a href="https://x.com/SHCRA2000"><i class="fab fa-x-twitter"></i></a>
-                    <a href="https://www.youtube.com/@SelfHelpChristianRefugeesAssoc"><i class="fab fa-youtube"></i></a>
+
+            <div class="footer-col">
+                <h4>Connect With Us</h4>
+                <div class="social-media">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                 </div>
+                <p class="contact-info">Email: info@christianrefugeesaid.org</p>
+                <p class="contact-info">Phone: +1 (123) 456-7890</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025 Christian Refugees Aid. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-
-    <!-- Back to Top Button -->
-    <button id="backToTop" title="Back to Top">
-        ↑
+    <button id="scrollToTopBtn" class="scroll-to-top" title="Go to top">
+        <i class="fas fa-arrow-up"></i>
     </button>
 
-    <script>
-        const hamburger = document.getElementById('hamburger');
-        const mobileNav = document.getElementById('mobileNav');
-
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('open');
-            mobileNav.classList.toggle('open');
-        });
-
-
-        const backToTopBtn = document.getElementById("backToTop");
-
-        window.onscroll = () => {
-            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-                backToTopBtn.style.display = "block";
-            } else {
-                backToTopBtn.style.display = "none";
-            }
-        };
-
-        backToTopBtn.onclick = () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        };
-
-
-    </script>
+    <script src="/assets/js/main.js"></script>
 </body>
 
 </html>

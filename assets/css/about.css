@@ -1,206 +1,277 @@
-html {
-  font-size: 1rem;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+/* --- Inner Page Hero Styles --- */
+.page-hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../images/about-hero-bg.jpg") no-repeat center center/cover; /* Background specific to about page */
+  height: 40vh; /* Consistent height for inner page heroes */
+  display: flex;
+  flex-direction: column; /* Stack text content */
+  align-items: center; /* Horizontally center content */
+  justify-content: center; /* Vertically center content */
+  text-align: center;
+  color: var(--color-text-light);
+  margin-bottom: 50px;
 }
 
-/* Container */
-.container {
-  max-width: 1100px;
+.page-hero h1 {
+  font-size: 3em;
+  color: var(--color-text-light);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-bottom: 15px;
+}
+
+.page-hero p {
+  font-size: 1.2em;
+  color: var(--color-text-light);
+  max-width: 800px;
   margin: 0 auto;
-  padding: 0 1rem;
 }
 
-/* Hero */
-.about-hero {
-  /*background: url("/assets/img/refs.png") center/cover no-repeat;*/
-  height: 60vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-
-.about-hero .overlay {
-  background: linear-gradient(
-      to bottom right,
-      rgba(0, 0, 0, 0.6),
-      rgba(0, 0, 0, 0.3)
-    ),
-    url(/assets/img/bg-c.jpg) no-repeat center/cover;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: #fff;
-  padding: 1rem;
-
-  h1 {
-    font-size: 2rem;
-  }
-  p {
-    font-size: 1.3rem;
-  }
-
-  a {
-    text-decoration: none;
-    display: inline-block;
-    background-color: #003d7a;
-    border-radius: 10px;
-    padding: 1em 2em;
-    color: #fff;
-    margin-top: 2em;
-    font-size: 1.2rem;
-
-    &:hover {
-      background: #3784d0;
-    }
-  }
-}
-
-/* Services Section */
-.about-services {
-  padding: 3rem 1rem;
-  background-color: #f3f3f3;
-  text-align: center;
-}
-
-.about-services .section-heading {
-  margin-bottom: 2rem;
-  font-size: 1.8rem;
-}
-
-.services-grid {
-  display: grid;
-  gap: 1.5rem;
-  grid-template-columns: 1fr;
-}
-
-.service-card {
-  background: #fff;
-  padding: 1rem;
-  border-radius: 1rem;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
-  text-align: center;
-}
-
-.service-card img {
-  width: 100%;
-  height: 160px;
-  object-fit: cover;
-  border-radius: 0.5rem;
-  margin-bottom: 1rem;
-}
-
-.service-card h3 {
-  margin: 0.5rem 0;
-}
-
-.btn-learn {
-  display: inline-block;
-  margin-top: 1rem;
-  background: #1a88ef;
-  color: #fff;
-  padding: 0.6rem 1.2rem;
-  border-radius: 0.5rem;
-  text-decoration: none;
-  transition: background 0.3s ease;
-}
-
-.btn-learn:hover {
-  background: #003d7a;
-}
-
+/* Media Queries for Inner Page Hero */
 @media (min-width: 768px) {
-  .services-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .page-hero {
+    height: 50vh;
+  }
+  .page-hero h1 {
+    font-size: 4.5em;
   }
 }
 
-@media (min-width: 1024px) {
-  .services-grid {
-    grid-template-columns: repeat(3, 1fr);
+/* --- Introduction Section Styles --- */
+.intro-section {
+  background-color: var(--color-text-light); /* White background */
+  padding: 60px 0; /* Consistent section padding */
+  text-align: center; /* Center the text */
+}
+
+.intro-section p {
+  max-width: 800px; /* Limit paragraph width for readability */
+  margin: 0 auto 1em auto; /* Center paragraphs and provide bottom margin */
+  font-size: 1.1em;
+  color: var(--color-text-dark);
+}
+
+/* --- Story Section (Alternating Content) --- */
+.story-section {
+  background: linear-gradient(
+    to bottom,
+    var(--color-background-light),
+    #e9e9e9
+  ); /* Subtle gradient background */
+}
+
+.story-item {
+  display: flex;
+  flex-direction: column; /* Stack vertically on mobile */
+  align-items: center;
+  gap: 30px; /* Space between image and content */
+  margin-bottom: 60px; /* Space between story items */
+  text-align: center; /* Center text on mobile */
+}
+
+.story-item:last-child {
+  margin-bottom: 0; /* No bottom margin for the last item */
+}
+
+.story-image {
+  flex: 1; /* Allows image to take up space */
+  max-width: 100%; /* Ensure it doesn't overflow */
+}
+
+.story-image img {
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.story-content {
+  flex: 2; /* Content takes more space than image */
+  padding: 0 15px; /* Add some padding */
+}
+
+.story-content h3 {
+  color: var(--color-primary); /* Red heading */
+  font-size: 1.8em;
+  margin-bottom: 15px;
+}
+
+.story-content p {
+  font-size: 1.1em;
+  margin-bottom: 15px;
+  color: var(--color-text-dark);
+}
+
+.story-content ul {
+  list-style: none; /* Remove default list bullets */
+  padding: 0;
+  margin: 15px 0 0;
+  text-align: left; /* Align list items left */
+  max-width: 500px; /* Limit width */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.story-content ul li {
+  margin-bottom: 8px;
+  color: var(--color-text-dark);
+  font-size: 0.95em;
+  position: relative;
+  padding-left: 20px; /* Space for custom bullet */
+}
+
+.story-content ul li::before {
+  content: "\f00c"; /* Font Awesome checkmark icon */
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900; /* For solid icon */
+  color: var(--color-primary); /* Red checkmark */
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* Media Queries for Story Section (Desktop - Alternating Layout) */
+@media (min-width: 768px) {
+  .story-item {
+    flex-direction: row; /* Row layout on desktop */
+    text-align: left; /* Align text left */
+    align-items: center; /* Vertically center content */
+  }
+
+  .story-item.reverse {
+    flex-direction: row-reverse; /* Reverse order for alternating layout */
+  }
+
+  .story-content {
+    padding: 0 30px; /* More padding on desktop */
   }
 }
 
-.about-values {
-  padding: 2rem 1rem;
+/* --- Values Section Styles (with CSS Grid) --- */
+.values-section {
+  background: linear-gradient(
+    to bottom,
+    var(--color-background-dark),
+    var(--color-secondary)
+  ); /* Dark gradient background */
+  padding-top: 80px; /* More padding for a prominent section */
+  padding-bottom: 80px;
 }
 
 .values-grid {
   display: grid;
+  /* Mobile: 1 column */
   grid-template-columns: 1fr;
-  gap: 1.5rem;
-  text-align: center;
+  gap: 30px; /* Space between grid items */
+  margin-top: 40px;
 }
 
 .value-card {
-  background: #fff;
-  padding: 1rem;
-  border-radius: 1rem;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+  background-color: var(--color-text-light); /* White card background */
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* Subtle shadow */
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
 }
 
-.value-card img {
-  width: 100%;
-  height: 160px;
-  object-fit: cover;
-  border-radius: 0.5rem;
-  margin-bottom: 1rem;
+.value-card:hover {
+  transform: translateY(-5px); /* Lift card slightly on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12); /* Enhanced shadow on hover */
 }
 
-@media (min-width: 768px) {
+.value-card .icon-medium {
+  /* New icon size for values */
+  font-size: 3em; /* Slightly smaller than service icons */
+  color: var(--color-primary); /* Red icons */
+  margin-bottom: 15px;
+}
+
+.value-card h3 {
+  font-size: 1.4em;
+  margin-bottom: 10px;
+  color: var(--color-secondary);
+}
+
+.value-card p {
+  font-size: 0.95em;
+  color: var(--color-text-dark);
+}
+
+/* Media Queries for Values Grid */
+@media (min-width: 600px) {
+  /* Tablets - 2 columns */
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  /* Desktops - 3 columns */
   .values-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-.site-footer {
-  background: #222;
-  color: #fff;
-  padding: 2rem 1rem;
+/* --- Team Preview Section --- */
+.team-preview-section {
+  background-color: var(--color-background-light); /* Light background */
 }
 
-.footer-grid {
+/* --- Call to Action (Contact) Section --- */
+.cta-contact-section {
+  background: linear-gradient(
+    to right,
+    var(--color-secondary),
+    var(--color-background-dark)
+  ); /* Dark gradient */
+  color: var(--color-text-light);
+  padding: 80px 0; /* Consistent with bottom CTA */
+}
+
+.cta-contact-section .section-title,
+.cta-contact-section .section-description {
+  color: var(--color-text-light);
+}
+
+/* --- Photo Gallery Section Styles --- */
+.photo-gallery-section {
+  background-color: var(--color-background-light); /* Light background */
+}
+
+.photo-grid {
   display: grid;
-  gap: 1.5rem;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(250px, 1fr)
+  ); /* Flexible grid for varied image sizes */
+  gap: 20px; /* Space between gallery items */
+  margin-top: 40px;
 }
 
-.site-footer h4 {
-  margin-bottom: 0.5rem;
+.gallery-item {
+  overflow: hidden; /* Hide overflowing parts of images if aspect ratio doesn't match grid cell */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.social-icons a {
-  color: #fff;
-  margin-right: 1rem;
-  font-size: 1.2rem;
+.gallery-item:hover {
+  transform: scale(1.02); /* Slight zoom on hover */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
 }
 
-@media (min-width: 768px) {
-  .footer-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-#backToTop {
-  position: fixed;
-  bottom: 30px;
-  right: 20px;
-  padding: 0.6rem 1rem;
-  background-color: #2d6cdf;
-  color: white;
-  border: none;
-  border-radius: 50%;
-  font-size: 1.2rem;
-  cursor: pointer;
-  display: none; /* hidden by default */
-  z-index: 1000;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  transition: opacity 0.3s ease;
+.gallery-item img {
+  width: 100%;
+  height: 100%; /* Important: This will make the image fill the grid cell */
+  object-fit: cover; /* Ensures image covers the area, cropping if necessary */
+  display: block; /* Remove extra space below image */
 }
 
-#backToTop:hover {
-  background-color: #1f4cb2;
+/* Optional: To make some images span multiple rows/columns for a "masonry" feel */
+/* Adjust these based on your image sizes and desired layout */
+/*
+.gallery-item:nth-child(2n) {
+    grid-row: span 2;
 }
+.gallery-item:nth-child(3n+1) {
+    grid-column: span 2;
+}
+*/

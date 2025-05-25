@@ -1,57 +1,888 @@
-* {
+:root {
+  --color-primary: #ff0000; /* Red */
+  --color-secondary: #000000; /* Black */
+  --color-text-light: #ffffff; /* White */
+  --color-text-dark: #333333; /* Dark Gray (for readability on white/light backgrounds) */
+  --color-background-light: #f8f8f8; /* Off-white for subtle background */
+  --color-background-dark: #1a1a1a; /* Dark gray/black for darker sections */
+  --color-accent: #ffd700; /* Gold/Yellow for highlights - optional but nice */
+}
+
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-html {
-  font-family: monospace;
-  font-size: 1rem;
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--color-text-dark);
+  background-color: var(--color-background-light);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
-#hero {
-  width: 100%;
-  height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.445), rgba(0, 0, 0, 0.441)),
-    url(/assets/img/SHCRA\ Logo.png) no-repeat center/ contain;
-  color: #fff;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0.8em;
+  color: var(--color-secondary);
+  line-height: 1.2;
 }
-.container {
-  width: 90%;
-  height: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
-  /*A technique to center align anything*/
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+
+h1 {
+  font-size: 2em;
 }
-.info h1 {
-  font-size: 3rem;
+h2 {
+  font-size: 1.6em;
+}
+h3 {
+  font-size: 1.4em;
+}
+
+p {
   margin-bottom: 1em;
 }
-.info p {
-  font-size: 1.3rem;
-  max-width: 80%;
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  width: 100%;
+  padding: 0 15px;
   margin: 0 auto;
 }
 
-.info .btn {
-  text-decoration: none;
+.btn {
   display: inline-block;
-  background-color: #770000;
-  border-radius: 10px;
-  padding: 1em 2em;
-  color: #fff;
-  margin-top: 2em;
-  font-size: 1.2rem;
+  padding: 12px 25px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
 
-  &:hover {
-    background: #7e4300;
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-text-light);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-text-light);
+}
+
+.btn-secondary {
+  background-color: var(--color-secondary);
+  color: var(--color-text-light);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-primary);
+  color: var(--color-text-light);
+}
+
+.btn-donate {
+  background-color: var(--color-accent);
+  color: var(--color-secondary);
+  padding: 15px 30px;
+}
+
+.btn-donate:hover {
+  background-color: var(--color-primary);
+  color: var(--color-text-light);
+}
+
+/* Media Queries for Larger Screens */
+@media (min-width: 768px) {
+  .container {
+    max-width: 960px;
+    padding: 0 20px;
+  }
+
+  h1 {
+    font-size: 3.5em;
+  }
+  h2 {
+    font-size: 2.5em;
+  }
+  h3 {
+    font-size: 2em;
   }
 }
 
-@media (max-width: 768px) {
-  html {
-    font-size: 0.8rem;
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+/*Header*/
+/* --- Header Styles (Mobile First) --- */
+.main-header {
+  background-color: var(--color-text-light); /* White background */
+  padding: 15px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  position: relative; /* For z-index context */
+  z-index: 100; /* Ensure header is on top */
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between; /* Space out logo, nav, and donate button */
+  align-items: center;
+}
+
+.logo a {
+  font-size: 1.5em; /* Smaller logo on mobile */
+  font-weight: bold;
+  color: var(--color-secondary); /* Black logo text */
+  text-decoration: none;
+  line-height: 1; /* Prevent extra space below text */
+}
+
+/* Hide desktop navigation and donate button on mobile */
+.main-nav,
+.header-donate-btn {
+  display: none;
+}
+
+/* Hamburger Menu Icon */
+.hamburger-menu {
+  background: none;
+  border: none;
+  font-size: 1.8em;
+  color: var(--color-secondary); /* Black icon */
+  cursor: pointer;
+  display: block; /* Show on mobile */
+  z-index: 110; /* Ensure it's above overlay */
+  padding: 5px; /* Make it easier to tap */
+  /* Transition for hamburger to X animation */
+  transition: transform 0.3s ease;
+}
+
+.hamburger-menu.active .fa-bars {
+  /* Class added by JS to rotate the bars icon */
+  transform: rotate(90deg);
+}
+.hamburger-menu.active .fa-times {
+  /* If we ever swapped icons, this would hide the X */
+  display: none;
+}
+
+/* --- Mobile Navigation Sidebar (Initially Hidden) --- */
+.mobile-nav-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Dark semi-transparent overlay */
+  z-index: 99; /* Below sidebar, above content */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.mobile-nav-sidebar {
+  position: fixed;
+  top: 0;
+  right: -280px; /* Initially off-screen to the right */
+  width: 280px; /* Width of the sidebar */
+  height: 100vh; /* Full viewport height */
+  background-color: var(--color-secondary); /* Black background */
+  color: var(--color-text-light); /* White text */
+  padding: 30px 20px;
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+  z-index: 100; /* On top of overlay */
+  transition: right 0.3s ease; /* Smooth slide-in/out */
+  display: flex; /* Use flex for internal layout */
+  flex-direction: column; /* Stack items */
+  align-items: flex-start; /* Align text to left */
+}
+
+.mobile-nav-sidebar.active {
+  /* Class added by JS when active */
+  right: 0; /* Slide in */
+}
+
+.mobile-nav-overlay.active {
+  /* Class added by JS when active */
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-nav-sidebar .close-sidebar {
+  background: none;
+  border: none;
+  font-size: 2em;
+  color: var(--color-text-light); /* White X icon */
+  cursor: pointer;
+  align-self: flex-end; /* Push to top right */
+  margin-bottom: 20px;
+  padding: 5px; /* Make it easier to tap */
+  transition: transform 0.3s ease;
+}
+
+.mobile-nav-sidebar ul {
+  list-style: none;
+  width: 100%; /* Take full width */
+  flex-grow: 1; /* Allows it to take up available space */
+}
+
+.mobile-nav-sidebar ul li {
+  margin-bottom: 20px; /* Space between links */
+}
+
+.mobile-nav-sidebar ul li a {
+  color: var(--color-text-light); /* White links */
+  font-size: 1.2em;
+  display: block; /* Make whole area clickable */
+  padding: 5px 0;
+  transition: color 0.3s ease;
+}
+
+.mobile-nav-sidebar ul li a:hover {
+  color: var(--color-primary); /* Red on hover */
+  text-decoration: none;
+}
+
+.mobile-nav-sidebar .btn-donate {
+  width: 100%; /* Make donate button full width */
+  text-align: center;
+  margin-top: 30px; /* Space from links */
+}
+
+/* --- Media Queries for Larger Screens (Desktop Navigation) --- */
+@media (min-width: 768px) {
+  .logo a {
+    font-size: 2em; /* Larger logo on desktop */
+  }
+
+  /* Show desktop navigation and donate button */
+  .main-nav {
+    display: block; /* Show desktop nav */
+  }
+
+  .main-nav ul {
+    list-style: none;
+    display: flex; /* Flexbox for horizontal links */
+    align-items: center;
+    gap: 25px; /* Space between nav items */
+  }
+
+  .main-nav ul li a {
+    color: var(--color-secondary); /* Black links */
+    font-weight: bold;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+  }
+
+  .main-nav ul li a:hover {
+    color: var(--color-primary); /* Red on hover */
+    text-decoration: none;
+  }
+
+  .header-donate-btn {
+    display: inline-block; /* Show desktop donate button */
+    margin-top: 0; /* Override default button margin-top */
+  }
+
+  /* Hide hamburger menu and mobile sidebar on desktop */
+  .hamburger-menu,
+  .mobile-nav-overlay,
+  .mobile-nav-sidebar {
+    display: none !important; /* Use !important to override JS added display: block */
+  }
+}
+
+/*Hero Section*/
+/* --- Hero Section Styles --- */
+.hero-section {
+  position: relative; /* Needed for positioning the overlay and content */
+  height: 70vh; /* Minimum height for the hero section on mobile (70% of viewport height) */
+  display: flex;
+  align-items: center; /* Vertically center content */
+  justify-content: center; /* Horizontally center content */
+  text-align: center;
+  color: var(--color-text-light); /* White text for contrast */
+  overflow: hidden; /* Ensures background image doesn't overflow if not covered */
+
+  /* Background Image and Linear Gradient Overlay */
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)),
+    /* Dark overlay */ url("#") no-repeat center center/cover; /* Background image */
+}
+
+/* Ensure you have hero-bg.jpg in your images folder, or use a placeholder URL */
+/* Example placeholder: url('https://via.placeholder.com/1920x1080/000000/FFFFFF?text=Hero+Background+Image') */
+
+.hero-content {
+  position: relative; /* Ensure content is above the overlay */
+  z-index: 2; /* Place content above the linear gradient */
+  padding: 20px; /* Add some padding around content */
+}
+
+.hero-section h1 {
+  font-size: 2.5em; /* Adjust for mobile */
+  margin-bottom: 15px;
+  color: var(--color-text-light); /* White heading */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Subtle text shadow for readability */
+}
+
+.hero-section p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+  color: var(--color-text-light); /* White paragraph */
+  max-width: 90%; /* Limit width for readability on small screens */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-buttons .btn {
+  margin: 10px 10px; /* Spacing between buttons */
+}
+
+/* Media Query for Larger Screens */
+@media (min-width: 768px) {
+  .hero-section {
+    height: 85vh; /* Taller hero section on desktop */
+  }
+
+  .hero-section h1 {
+    font-size: 4.5em; /* Larger heading on desktop */
+  }
+
+  .hero-section p {
+    font-size: 1.6em;
+    max-width: 70%; /* Limit paragraph width for better readability */
+  }
+}
+
+/* --- General Section Styling & Helpers --- */
+section {
+  padding: 60px 0; /* Consistent vertical padding for all sections */
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 2.2em; /* Mobile default */
+  color: var(--color-secondary); /* Black title */
+}
+
+.section-description {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 30px; /* Center and add bottom margin */
+  font-size: 1.1em;
+  color: var(--color-text-dark); /* Dark gray description text */
+}
+
+/* Helper for white text on dark backgrounds */
+.white-text {
+  color: var(
+    --color-text-light
+  ) !important; /* Use !important to override default text color if needed */
+}
+
+/* Helper for centering content */
+.text-center {
+  text-align: center;
+}
+
+/* --- Mission Section Styles --- */
+.mission-section {
+  background: linear-gradient(
+    to bottom,
+    var(--color-background-light),
+    #e9e9e9
+  ); /* Subtle gradient from light to slightly darker off-white */
+  color: var(--color-text-dark); /* Ensure text is dark */
+}
+
+.mission-content {
+  max-width: 800px; /* Limit width for readability */
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Media Query for Larger Screens */
+@media (min-width: 768px) {
+  .section-title {
+    font-size: 3em; /* Larger on desktop */
+  }
+}
+
+/* --- Services Home Section Styles (with CSS Grid) --- */
+.services-home-section {
+  background-color: var(
+    --color-background-light
+  ); /* Light background for contrast */
+}
+
+.service-cards-grid {
+  display: grid;
+  /* Mobile: 1 column, full width */
+  grid-template-columns: 1fr;
+  gap: 30px; /* Space between grid items */
+  margin-top: 40px; /* Space below description */
+  margin-bottom: 40px; /* Space above the button */
+}
+
+.service-card {
+  background-color: var(--color-text-light); /* White card background */
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* Subtle shadow for depth */
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.service-card:hover {
+  transform: translateY(-5px); /* Lift card slightly on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12); /* Enhanced shadow on hover */
+}
+
+.service-card .icon-large {
+  font-size: 3.5em; /* Large icons */
+  color: var(--color-primary); /* Red icons */
+  margin-bottom: 20px;
+}
+
+.service-card h3 {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  color: var(--color-secondary);
+}
+
+.service-card p {
+  font-size: 1em;
+  color: var(--color-text-dark);
+}
+
+/* Media Queries for Services Grid */
+@media (min-width: 600px) {
+  /* Tablets - 2 columns */
+  .service-cards-grid {
+    grid-template-columns: repeat(2, 1fr); /* Two columns, equal width */
+  }
+}
+
+@media (min-width: 992px) {
+  /* Desktops - 4 columns */
+  .service-cards-grid {
+    grid-template-columns: repeat(4, 1fr); /* Four columns, equal width */
+  }
+}
+
+/* --- Impact Section Styles (with CSS Grid & Overlays) --- */
+.impact-section {
+  background: linear-gradient(
+    to bottom,
+    var(--color-secondary),
+    var(--color-background-dark)
+  ); /* From black to dark gray */
+  color: var(--color-text-light); /* White text */
+}
+
+.impact-section .section-title,
+.impact-section .section-description {
+  color: var(
+    --color-text-light
+  ); /* Ensure title and description are white for this dark section */
+}
+
+.impact-gallery {
+  display: grid;
+  /* Mobile: 1 column */
+  grid-template-columns: 1fr;
+  gap: 30px; /* Space between grid items */
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.impact-item {
+  position: relative; /* Essential for positioning the overlay relative to the item */
+  overflow: hidden; /* Hides content that overflows, useful for hover effects */
+  border-radius: 8px; /* Rounded corners for the entire item */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  cursor: pointer;
+}
+
+.impact-item img {
+  width: 100%; /* Image takes full width of its container */
+  height: 250px; /* Fixed height for consistency */
+  object-fit: cover; /* Ensures image covers the area without distortion */
+  display: block; /* Removes extra space below image */
+  transition: transform 0.5s ease; /* Smooth zoom effect on hover */
+}
+
+.impact-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(
+    var(--color-primary-rgb, 255, 0, 0),
+    0.7
+  ); /* Red overlay with transparency */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--color-text-light);
+  opacity: 0; /* Initially hidden */
+  transform: translateY(100%); /* Start off-screen at the bottom */
+  transition: opacity 0.4s ease, transform 0.4s ease; /* Smooth transition for appearance */
+}
+
+/* Fallback for --color-primary-rgb if not defined (add this to your :root) */
+/* :root { --color-primary-rgb: 255, 0, 0; } */
+/* You would add this in your :root variables section if you want to use RGB values */
+/* For now, just using 255,0,0 directly is fine. */
+
+.impact-item:hover .impact-overlay {
+  opacity: 1; /* Make overlay visible on hover */
+  transform: translateY(0); /* Slide overlay into view */
+}
+
+.impact-item:hover img {
+  transform: scale(1.05); /* Slightly zoom image on hover */
+}
+
+.impact-overlay h3 {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+  color: var(--color-text-light);
+}
+
+.impact-overlay p {
+  font-size: 1em;
+  padding: 0 15px;
+  color: var(--color-text-light);
+}
+
+/* Media Queries for Impact Grid */
+@media (min-width: 600px) {
+  /* Tablets - 2 columns */
+  .impact-gallery {
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+  }
+}
+
+@media (min-width: 992px) {
+  /* Desktops - 4 columns */
+  .impact-gallery {
+    grid-template-columns: repeat(4, 1fr); /* Four columns */
+  }
+}
+
+@media (min-width: 1200px) {
+  /* Larger Desktops - adjust for max width */
+  .impact-gallery {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(250px, 1fr)
+    ); /* More flexible grid for large screens */
+  }
+}
+
+/* --- Call to Action (Bottom) Section Styles --- */
+.cta-bottom-section {
+  background: linear-gradient(
+    to right,
+    var(--color-primary),
+    #cc0000
+  ); /* Bold red gradient */
+  color: var(--color-text-light); /* White text */
+  padding: 80px 0; /* More padding to make it stand out */
+  text-align: center; /* Center content within the section */
+}
+
+.cta-bottom-section .section-title,
+.cta-bottom-section .section-description {
+  color: var(--color-text-light); /* Ensure title and description are white */
+}
+
+/* Style for a larger button */
+.btn-large {
+  padding: 18px 40px; /* Larger padding */
+  font-size: 1.2em; /* Larger font size */
+  margin-top: 30px; /* More space above the button */
+}
+
+/* --- Footer Styles --- */
+.main-footer {
+  background-color: var(--color-secondary); /* Black background */
+  color: var(--color-text-light); /* White text */
+  padding: 40px 0; /* Consistent vertical padding */
+  font-size: 0.9em;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.main-footer .container {
+  padding: 0 15px; /* Ensure container padding is consistent for mobile */
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column; /* Stack columns vertically on mobile */
+  align-items: center; /* Center items horizontally in column layout */
+  gap: 30px; /* Space between footer columns on mobile */
+  margin-bottom: 30px; /* Space above the bottom copyright info */
+}
+
+.footer-col {
+  text-align: center; /* Center text within each column on mobile */
+  flex: 1; /* Allow columns to grow */
+  width: 100%; /* Take full width on mobile */
+  max-width: 300px; /* Limit max width of a column on mobile */
+}
+
+.footer-col h3,
+.footer-col h4 {
+  color: var(--color-text-light); /* White headings */
+  margin-bottom: 15px;
+  font-size: 1.2em; /* Adjusted heading size */
+}
+
+.footer-col p {
+  margin-bottom: 10px;
+  color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Slightly transparent white for paragraphs */
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 10px; /* Space between stacked links on mobile */
+}
+
+.footer-links ul li:last-child {
+  margin-bottom: 0;
+}
+
+.footer-links ul li a {
+  color: var(--color-text-light);
+  font-weight: normal;
+  transition: color 0.3s ease;
+  display: block; /* Make the whole li clickable area */
+}
+
+.footer-links ul li a:hover {
+  color: var(--color-primary); /* Red on hover */
+  text-decoration: none;
+}
+
+.social-media {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.social-media a {
+  color: var(--color-text-light);
+  margin: 0 10px;
+  font-size: 1.5em; /* Larger social icons */
+  transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+  color: var(--color-primary);
+}
+
+.contact-info {
+  font-size: 0.95em;
+  margin-bottom: 5px;
+}
+
+/* Footer Bottom Copyright Area */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1); /* Subtle white line above copyright */
+  padding-top: 20px;
+  margin-top: 20px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.6); /* Lighter copyright text */
+  font-size: 0.85em;
+}
+
+/* --- Media Queries for Larger Screens (Desktop Footer) --- */
+@media (min-width: 768px) {
+  .main-footer .container {
+    padding: 0 20px; /* Adjust padding for tablets/desktops */
+  }
+
+  .footer-content {
+    flex-direction: row; /* Layout columns in a row on larger screens */
+    justify-content: space-between; /* Distribute space evenly */
+    align-items: flex-start; /* Align columns to the top */
+    text-align: left; /* Align text left within columns */
+  }
+
+  .footer-col {
+    width: auto; /* Let content dictate width */
+    max-width: none; /* Remove max-width restriction */
+    flex: 1; /* Distribute space equally among columns */
+  }
+
+  .footer-col:first-child {
+    flex: 1.5; /* Give the first column (logo/description) a bit more space */
+  }
+
+  .footer-links ul li {
+    margin-bottom: 0; /* Remove vertical margin for inline links */
+    display: block; /* Keep them stacked even on desktop for quick links */
+  }
+}
+
+@media (min-width: 1200px) {
+  .main-footer .container {
+    padding: 0; /* Remove side padding on very large screens if using max-width */
+  }
+}
+
+/* --- Scroll to Top Button Styles --- */
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px; /* Distance from bottom */
+  right: 20px; /* Distance from right */
+  background-color: var(--color-primary); /* Red button */
+  color: var(--color-text-light); /* White icon */
+  border: none;
+  border-radius: 50%; /* Makes it a perfect circle */
+  width: 50px;
+  height: 50px;
+  font-size: 1.5em; /* Size of the arrow icon */
+  display: flex; /* Use flex to center the icon */
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  opacity: 0; /* Initially hidden */
+  visibility: hidden; /* Also hidden from screen readers/interactions */
+  transition: opacity 0.3s ease, visibility 0.3s ease,
+    background-color 0.3s ease; /* Smooth transitions */
+  z-index: 90; /* Ensure it's above most content but below header/sidebar */
+}
+
+.scroll-to-top:hover {
+  background-color: var(--color-secondary); /* Black on hover */
+}
+
+.scroll-to-top.show {
+  /* Class added by JS to show the button */
+  opacity: 1;
+  visibility: visible;
+}
+
+/* --- Donate Page Specific Styles --- */
+.donate-page-hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../images/donate-hero-bg.jpg") no-repeat center center/cover; /* Specific background for donate page */
+  height: 40vh; /* Shorter hero for inner pages */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--color-text-light);
+  margin-bottom: 50px; /* Space below hero */
+}
+
+.donate-page-hero h1 {
+  font-size: 3em;
+  color: var(--color-text-light);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.donation-form-container {
+  background-color: var(
+    --color-text-light
+  ); /* White background for the form area */
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  max-width: 700px; /* Limit width for readability */
+  margin: 40px auto; /* Center the container and provide vertical spacing */
+  text-align: center;
+}
+
+.donation-form-container h2 {
+  color: var(--color-primary); /* Red heading for "How to Donate" */
+  margin-bottom: 25px;
+  font-size: 2em;
+}
+
+.donation-form-container p {
+  font-size: 1.1em;
+  line-height: 1.7;
+  margin-bottom: 15px;
+  color: var(--color-text-dark);
+}
+
+.donation-form-container .btn {
+  margin-top: 30px; /* Space above button */
+  padding: 15px 35px; /* Larger button */
+  font-size: 1.1em;
+}
+
+.donation-disclaimer {
+  font-style: italic;
+  color: #666;
+  margin-top: 20px;
+}
+
+.thank-you-message {
+  margin-top: 50px;
+  font-size: 1.2em;
+  color: var(--color-secondary);
+  font-weight: bold;
+}
+
+/* Media Queries for Donate Page */
+@media (min-width: 768px) {
+  .donate-page-hero {
+    height: 50vh; /* Taller hero on desktop */
+  }
+  .donate-page-hero h1 {
+    font-size: 4.5em;
+  }
+  .donation-form-container {
+    padding: 60px; /* More padding on desktop */
   }
 }
