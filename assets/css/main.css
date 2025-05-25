@@ -68,7 +68,7 @@ img {
 }
 
 .container {
-  width: 100%;
+  width: 90%;
   padding: 0 15px;
   margin: 0 auto;
 }
@@ -335,7 +335,8 @@ img {
 
   /* Background Image and Linear Gradient Overlay */
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)),
-    /* Dark overlay */ url("#") no-repeat center center/cover; /* Background image */
+    /* Dark overlay */ url(/assets/img/SHCRA\ Logo.png) no-repeat center
+      center/cover; /* Background image */
 }
 
 /* Ensure you have hero-bg.jpg in your images folder, or use a placeholder URL */

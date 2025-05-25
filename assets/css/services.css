@@ -1,3 +1,13 @@
+:root {
+  --color-primary: #ff0000; /* Red */
+  --color-secondary: #000000; /* Black */
+  --color-text-light: #ffffff; /* White */
+  --color-text-dark: #333333; /* Dark Gray (for readability on white/light backgrounds) */
+  --color-background-light: #f8f8f8; /* Off-white for subtle background */
+  --color-background-dark: #1a1a1a; /* Dark gray/black for darker sections */
+  --color-accent: #ffd700; /* Gold/Yellow for highlights - optional but nice */
+}
+
 /* --- Detailed Services Section --- */
 .detailed-services-section {
   background-color: var(
