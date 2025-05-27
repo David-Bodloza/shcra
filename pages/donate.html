@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Christian Refugees Aid - Donate</title>
+    <title>SHCRA | Donate</title>
     <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/about.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -49,25 +50,87 @@
         </ul>
     </nav>
 
-    <main style="padding: 80px 0;">
-        <section class="container text-center">
-            <h1 class="section-title">Support Our Mission</h1>
-            <p class="section-description">Your generous contribution directly helps Christian refugees rebuild their
-                lives. Every amount, big or small, makes a profound difference.</p>
-
-            <div
-                style="background-color: var(--color-text-light); padding: 40px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); max-width: 600px; margin: 40px auto;">
-                <h2>How to Donate</h2>
-                <p>Below is where a secure donation form or a link to our trusted payment gateway would be embedded.</p>
-                <p style="font-style: italic; color: #666;">(For demonstration purposes, imagine a form or PayPal button
-                    here.)</p>
-                <a href="https://www.paypal.com/donate/buttons" target="_blank" class="btn btn-primary"
-                    style="margin-top: 20px;">Imagine a PayPal Button Here!</a>
-                <p style="margin-top: 20px;">We accept all major credit cards and PayPal.</p>
+    <main>
+        <section class="page-hero"
+            style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/donate-hero-bg.jpg');">
+            <div class="container">
+                <h1>Support Our Mission</h1>
+                <p>Your generosity transforms lives and offers hope.</p>
             </div>
+        </section>
 
-            <p style="margin-top: 40px; font-size: 1.1em; color: var(--color-secondary);">Thank you for your kindness
-                and compassion.</p>
+        <section class="intro-section">
+            <div class="container">
+                <h2 class="section-title">Making a Difference Through Giving</h2>
+                <p class="section-description">Every contribution, big or small, directly supports Christian refugees
+                    with vital aid, community integration, and spiritual guidance. Thank you for partnering with us.</p>
+            </div>
+        </section>
+
+        <section class="bank-details-section">
+            <div class="container">
+                <h2 class="section-title white-text">Donate via Bank Transfer</h2>
+                <p class="section-description white-text">For direct contributions, please use the bank details below.
+                    Your support is deeply appreciated.</p>
+
+                <div class="bank-details-card">
+                    <div class="detail-row">
+                        <span class="detail-label"><i class="fas fa-university"></i> Bank Name:</span>
+                        <span class="detail-value">First National Bank (FNB)</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label"><i class="fas fa-code-branch"></i> Branch Name:</span>
+                        <span class="detail-value">Sandton City</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label"><i class="fas fa-hashtag"></i> Account Number:</span>
+                        <span class="detail-value" id="accountNumber">6284 5678 912</span>
+                        <button class="copy-btn" data-copy-target="accountNumber" aria-label="Copy account number"><i
+                                class="fas fa-copy"></i></button>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label"><i class="fas fa-user-circle"></i> Account Name:</span>
+                        <span class="detail-value">Christian Refugees Aid</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label"><i class="fas fa-sort-numeric-up"></i> Sort Code:</span>
+                        <span class="detail-value">254005</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label"><i class="fas fa-globe"></i> SWIFT Code:</span>
+                        <span class="detail-value">FIRNZAJJXXX</span>
+                    </div>
+                </div>
+
+                <div class="reference-note text-center">
+                    <p><i class="fas fa-info-circle"></i> Please use your "Name or "Donation" as the
+                        payment reference to help us track your generous contribution.</p>
+                </div>
+
+                <div class="text-center">
+                    <a href="contact.html" class="btn btn-primary btn-large">Contact Us for More Info</a>
+                </div>
+            </div>
+        </section>
+
+        <!--Other ways to donate-->
+        <!--section class="other-methods-section">
+            <div class="container text-center">
+                <h2 class="section-title">Other Ways to Donate</h2>
+                <p class="section-description">If you prefer to donate online via card or PayPal, please click the
+                    button below.</p>
+                <a href="https://www.paypal.com/donate/buttons" target="_blank"
+                    class="btn btn-secondary btn-large">Donate Online via PayPal</a>
+            </div>
+        </section-->
+
+        <section class="cta-bottom-section">
+            <div class="container text-center">
+                <h2 class="section-title white-text">Your Compassion Fuels Our Mission</h2>
+                <p class="section-description white-text">Together, we can provide a beacon of hope for those in
+                    desperate need.</p>
+                <a href="about.html" class="btn btn-donate btn-large">Learn More About Our Impact</a>
+            </div>
         </section>
     </main>
 
@@ -85,8 +148,9 @@
                     <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                     <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                 </div>
-                <p class="contact-info">Email: info@christianrefugeesaid.org</p>
-                <p class="contact-info">Phone: +1 (123) 456-7890</p>
+                <p class="contact-info">Email: infoshcra.org@gmail.com</p>
+                <p class="contact-info">Phone: +27 78 425 1650</p>
+                <p class="contact-info">Address: 9 Frances Street, Yeovile, Johannesburg, 2198, South Africa</p>
             </div>
         </div>
         <div class="footer-bottom">

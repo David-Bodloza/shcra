@@ -887,3 +887,144 @@ section {
     padding: 60px; /* More padding on desktop */
   }
 }
+
+/*------------------------------------------------------*/
+/* --- Bank Details Section --- */
+.bank-details-section {
+  padding: var(--section-padding);
+  background-color: var(
+    --color-background-dark
+  ); /* Dark background for this section */
+}
+
+.bank-details-card {
+  background-color: var(--color-text-light); /* White card background */
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  max-width: 700px; /* Limit width for readability */
+  margin: 50px auto; /* Center the card */
+}
+
+.detail-row {
+  display: flex;
+  flex-direction: column; /* Stack label and value on mobile */
+  align-items: flex-start; /* Align text to left */
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px dashed #eee; /* Dashed separator for each row */
+  position: relative; /* For copy button positioning */
+}
+
+.detail-row:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none; /* No border for the last row */
+}
+
+.detail-label {
+  font-size: 1.1em;
+  font-weight: 600;
+  color: var(--color-secondary); /* Black label */
+  margin-bottom: 8px; /* Space between label and value on mobile */
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between icon and text */
+}
+
+.detail-label i {
+  color: var(--color-primary); /* Red icon */
+  font-size: 1.2em;
+}
+
+.detail-value {
+  font-size: 1.2em;
+  color: var(--color-text-dark); /* Dark grey value */
+  font-family: "Courier New", Courier, monospace; /* Monospace for account number */
+  background-color: #f9f9f9; /* Slightly different background for value */
+  padding: 5px 10px;
+  border-radius: 5px;
+  user-select: all; /* Allow easy selection for copying */
+  word-break: break-all; /* Break long numbers */
+}
+
+.copy-btn {
+  background-color: var(--color-primary); /* Red button */
+  color: var(--color-text-light);
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+  font-size: 0.9em;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 10px; /* Space below value on mobile */
+  align-self: flex-start; /* Align to left on mobile */
+}
+
+.copy-btn:hover {
+  background-color: var(--color-secondary); /* Black on hover */
+  transform: translateY(-2px);
+}
+
+.copy-btn i {
+  margin-right: 5px;
+}
+
+/* --- Bank Details Section --- */
+/* ... (keep existing styles for bank-details-section, bank-details-card, detail-row etc.) ... */
+
+.reference-note {
+  background-color: #fcebeb; /* Very light red/pink background */
+  border-left: 5px solid var(--color-primary); /* Bold red border on left */
+  padding: 25px;
+  border-radius: 8px;
+  margin-top: 40px;
+  color: var(--color-text-dark); /* Use dark grey text for readability */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Lighter shadow */
+  text-align: left;
+}
+
+/* Keep the rest of the .reference-note p, p strong, i styles as they are */
+.reference-note p {
+  font-size: 1.15em;
+  line-height: 1.7;
+  margin-bottom: 0;
+  font-weight: 500;
+}
+
+.reference-note p strong {
+  color: var(--color-primary); /* Make the bold text the primary red color */
+  font-weight: 700;
+}
+
+.reference-note i {
+  color: var(--color-primary);
+  margin-right: 12px;
+  font-size: 1.5em;
+  vertical-align: middle;
+}
+
+/* --- Other Methods Section --- */
+.other-methods-section {
+  padding: var(--section-padding);
+  background-color: var(--color-background-light); /* Light background */
+}
+
+/* Media Queries for Bank Details */
+@media (min-width: 768px) {
+  .detail-row {
+    flex-direction: row; /* Row layout on desktop */
+    justify-content: space-between; /* Space out label and value */
+    align-items: center; /* Vertically center */
+  }
+  .detail-label {
+    margin-bottom: 0; /* Remove mobile margin */
+  }
+  .copy-btn {
+    position: absolute; /* Position next to account number */
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-top: 0; /* Remove mobile margin */
+  }
+}

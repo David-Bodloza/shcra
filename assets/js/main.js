@@ -65,3 +65,35 @@ if (scrollToTopBtn) {
     });
   });
 }
+
+// --- Copy to Clipboard Functionality ---
+const copyButtons = document.querySelectorAll(".copy-btn");
+
+copyButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const targetId = button.dataset.copyTarget;
+    const targetElement = document.getElementById(targetId);
+
+    if (targetElement) {
+      // Create a temporary textarea element
+      const textarea = document.createElement("textarea");
+      textarea.value = targetElement.textContent.trim(); // Get the text content
+      document.body.appendChild(textarea); // Append to body temporarily
+      textarea.select(); // Select the text
+
+      try {
+        document.execCommand("copy"); // Execute copy command
+        button.innerHTML = '<i class="fas fa-check"></i> Copied!'; // Change text to "Copied!"
+        setTimeout(() => {
+          button.innerHTML = '<i class="fas fa-copy"></i>'; // Revert after 2 seconds
+        }, 2000);
+      } catch (err) {
+        console.error("Failed to copy text: ", err);
+        // Fallback for older browsers or if execCommand fails
+        alert("Failed to copy. Please manually copy: " + textarea.value);
+      } finally {
+        document.body.removeChild(textarea); // Remove the temporary textarea
+      }
+    }
+  });
+});
