@@ -334,9 +334,8 @@ img {
   overflow: hidden; /* Ensures background image doesn't overflow if not covered */
 
   /* Background Image and Linear Gradient Overlay */
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)),
-    /* Dark overlay */ url(/assets/img/SHCRA\ Logo.png) no-repeat center
-      center/cover; /* Background image */
+  background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.4)),
+    /* Dark overlay */ url("") no-repeat center center/cover; /* Background image */
 }
 
 /* Ensure you have hero-bg.jpg in your images folder, or use a placeholder URL */
