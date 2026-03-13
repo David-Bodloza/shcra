@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHCRA | Home</title>
+
+    <!--Favicon-->
+    <link rel="icon" type="image/png" href="/assets/images/favicon.ico">
+
+    <!--Touch icon-->
+    <link rel="apple-touch-icon" href="/assets/images/touch.png">
+
+    <!--Font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!--css-->
+    <link rel="stylesheet" href="/assets/css/styles.css">
+
+    <style>
+        .card h3 {
+            color: darkblue;
+        }
+
+        .read-more {
+            background-color: green;
+
+            &:hover {
+                background-color: darkred;
+            }
+        }
+
+        .read-more a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: 700;
+        }
+
+        .section-title {
+            text-align: center;
+            /* Centers the text */
+            position: relative;
+            /* Anchor for the underline */
+            padding-bottom: 15px;
+            /* Space for the line */
+        }
+
+        .section-title::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+
+            /* The Centering Logic */
+            left: 50%;
+            /* Move starting point to the middle */
+            transform: translateX(-50%);
+            /* Pull it back by half its own width */
+
+            /* Styling */
+            width: 60px;
+            /* Adjust for "shortness" */
+            height: 4px;
+            background-color: darkred;
+            border-radius: 10px;
+        }
+
+        /*Video Section*/
+        .video-intro-section {
+            padding: 80px 20px;
+            background-color: #f9fafb;
+            /* Light neutral background */
+        }
+
+        .text-center {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        /* Your Centered Short Underline */
+        .section-title {
+            position: relative;
+            font-size: 2.5rem;
+            color: #111827;
+            margin-bottom: 20px;
+        }
+
+        .section-title::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            /* Short underline */
+            height: 4px;
+            background-color: darkred;
+            /* Trusting blue color */
+            border-radius: 2px;
+        }
+
+        .section-subtitle {
+            color: #6b7280;
+            max-width: 600px;
+            margin: 20px auto 0;
+            line-height: 1.6;
+        }
+
+        /* The Responsive Video Box */
+        .video-wrapper {
+            position: relative;
+            max-width: 800px;
+            /* Limits width for a cinematic feel */
+            margin: 0 auto;
+            padding-bottom: 56.25%;
+            /* 16:9 Aspect Ratio */
+            height: 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        .video-wrapper iframe,
+        .video-wrapper video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <a href="/index.html"><img src="/assets/images/logo.png" alt="shcra logo"
+                    style="width: 150px; padding-right: 2em;"></a>
+        </div>
+
+        <nav class="nav-links" id="nav-links">
+            <a href="/index.html" class="active">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">About ▼</button>
+                <div class="dropdown-content">
+                    <a href="/pages/about/mission.html">Our Mission</a>
+                    <a href="/pages/about/vission.html">Our Vision</a>
+                    <a href="/pages/about/objective.html">Our Objectives</a>
+                </div>
+            </div>
+            <a href="/pages/services.html">Services</a>
+            <a href="/pages/gallery.html">Gallery</a>
+            <a href="/pages/blog/blog.html">Blog</a>
+            <a href="/pages/team.html">Team</a>
+            <a href="/pages/contact.html">Contact</a>
+            <a href="/pages/donate.html" class="btn-donate">Donate</a>
+        </nav>
+
+        <div class="hamburger" id="hamburger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" style="z-index: 0;">
+            <div class="hero-slides">
+                <div class="slide active"
+                    style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/assets/images/hero-1.JPG')">
+                </div>
+                <div class="slide"
+                    style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/assets/images/hero-2.JPG')">
+                </div>
+                <div class="slide"
+                    style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/assets/images/hero-4.JPG')">
+                </div>
+            </div>
+
+            <div class="hero-content">
+                <h1>Empowering Needy Communities, <br><span>Restoring Hope.</span></h1>
+                <p>Providing essential support and a path to self-sufficiency for South Africans and refugees.</p>
+                <div class="hero-btns">
+                    <a href="/pages/blog/blog.html" class="btn-primary">Our Programs</a>
+                    <a href="/pages/contact.html" class="btn-secondary">Join the Mission</a>
+                </div>
+            </div>
+
+            <div class="dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+
+            <div class="scroll-indicator">
+                <span></span>
+            </div>
+        </section>
+
+        <section class="core-values" style="margin-bottom: -10rem;">
+            <div class="container">
+                <div class="value-row foundation">
+                    <div class="content">
+                        <span class="sub-label">Our Organization</span>
+                        <h2 class="section-title">Built on Faith and Resiliance</h2>
+                        <p>SHCRA was founded in 2000 on the belief that refugees are not just recipients of aid, but
+                            agents of change.
+
+
+                            Upon arriving in South Africa we found that no organization was ready to welcome the
+                            refugees, we had to rely on our selves for essentials like food, accommodation and education
+
+
+                            Most of refugees here in South Africa, came to the country, empty handed with no
+                            acknowledgment.</p>
+                    </div>
+
+
+                    <!-- Video Intro Section -->
+                    <section class="video-intro-section">
+                        <div class="container">
+
+                            <!-- Title with centered short underline -->
+                            <div class="text-center">
+                                <h2 class="section-title">The Vision in Action</h2>
+                                <p class="section-subtitle">A brief intro and stories of shcra organization.</p>
+                            </div>
+
+                            <!-- Video Wrapper (16:9 Aspect Ratio) -->
+                            <div class="video-wrapper">
+                                <iframe src="https://www.youtube.com/embed/2ADZGaLgb-I"
+                                    title="Humanitarian Impact Video" frameborder="0"
+                                    referrerpolicy="no-referrer-when-downgrade"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+
+
+                        </div>
+
+                        <p style="margin-top: 40px;">
+                            <a href="https://www.youtube.com/@SelfHelpChristianRefugeesAssoc" class="nav-link"
+                                style="color: var(--brand-blue); font-weight: bold; text-decoration: underline;">
+                                Visit our YouTube Channel for more stories →
+                            </a>
+                        </p>
+                </div>
+        </section>
+
+
+        </div>
+
+        <hr class="section-divider">
+
+        <!-- Main Section Container -->
+        <section class="card-section" aria-labelledby="section-title">
+            <h2 class="section-title" class="sr-only" style="color: darkblue;">Our Core Focus</h2>
+            <div class="card-grid">
+
+                <!-- Card 1: Mission -->
+                <article class="card">
+                    <div class="icon-box" aria-hidden="true">🎯</div>
+                    <h3>Mission</h3>
+                    <p>To assist, train, and to inform refugees and local community
+                        members so that they become self-sufficient.</p>
+                    <button class="read-more" aria-label="Read more about our mission"><a
+                            href="/pages/about/mission.html">Read More →</a></button>
+                </article>
+
+                <!-- Card 2: Vision -->
+                <article class="card">
+                    <div class="icon-box" aria-hidden="true">👁️</div>
+                    <h3>Vision</h3>
+                    <p>To help needy refugees and local Community members to sustain
+                        themselves.</p>
+                    <button class="read-more" aria-label="Read more about our vision"><a
+                            href="/pages/about/vission.html">Read More →</a></button>
+                </article>
+
+                <!-- Card 3: Objective -->
+                <article class="card">
+                    <div class="icon-box" aria-hidden="true">📉</div>
+                    <h3>Objective</h3>
+                    <p>to facilitate a peaceful integration of refugees in South African community and to improve the
+                        socio-economic living conditions of needy people regardless of religion,
+                        race,gender,tribe,nationaliies or ethnic groups. </p>
+                    <button class="read-more" aria-label="Read more about our objective"><a
+                            href="/pages/about/objective.html">Read More →</a></button>
+                </article>
+
+            </div>
+        </section>
+
+        </div>
+        </section>
+    </main>
+
+    <!--Overlay toggler-->
+    <div class="menu-overlay" id="menu-overlay"></div>
+
+    <!--Back to top-->
+    <button id="backToTop" title="Go to top" style="font-size: 1.5rem;">↑</button>
+
+    <a href="https://wa.me/27784251650?text=Hi%20SHCRA,%20I'd%20like%20to%20inquire%20about..." class="whatsapp-float"
+        target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="wa-icon">
+        <span class="wa-tooltip">Chat with us</span>
+    </a>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-section footer-brand">
+                <div class="logo-footer">
+                    <img src="/assets/images/logo.png" alt="shcra logo" style="width: 150px; padding-right: 2em;">
+                </div>
+                <p>Providing essential support and a path to self-sufficiency for South Africans and refugees.</p>
+            </div>
+
+            <div class="footer-section footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="/pages/about/mission.html">About Us</a></li>
+                    <li><a href="/pages/blog/blog.html">Support Programs</a></li>
+                    <li><a href="/pages/contact.html">Volunteer</a></li>
+                    <li><a href="/pages/donate.html">Donate</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Physical Address:</h4>
+                <div class="contact-info">
+                    <p>9 Frances street, Yeovile, Johannesburg, 2198 South Africa</p>
+                </div>
+                <h4>Connect</h4>
+                <div class="contact-info">
+                    <p style="margin-bottom: 2em;">Cell: +27 78 425 1650</p>
+                    <p>Email: infoshcra.org@gmail.com</p>
+                </div>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/profile.php?id=61575988463472" class="social-btn"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/shcra_2000/" class="social-btn"><i class="fab fa-instagram"></i>
+                        <a href="https://www.x.com/SHCRA2000" class="social-btn"><i class="fab fa-x"></i></a>
+                        <a href="https://www.youtube.com/@SelfHelpChristianRefugeesAssoc" class="social-btn"><i
+                                class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            &copy; 2026 Self-Help Christian Refugee Association. All rights reserved.
+        </div>
+    </footer>
+
+    <!--javascript-->
+    <script src="/assets/js/script.js"></script>
+</body>
+
+</html>

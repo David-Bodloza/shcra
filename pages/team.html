@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHCRA | Home</title>
+
+    <!--Favicon-->
+    <link rel="icon" type="image/png" href="/assets/images/favicon.ico">
+
+    <!--Touch icon-->
+    <link rel="apple-touch-icon" href="/assets/images/touch.png">
+
+    <!--Font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!--css-->
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <style>
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 100px 24px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            color: var(--primary);
+            letter-spacing: -1.5px;
+        }
+
+        .header p {
+            color: #64748b;
+            font-size: 1.2rem;
+            margin-top: 15px;
+            max-width: 600px;
+            margin-inline: auto;
+        }
+
+        /* --- HORIZONTAL BIO CARDS --- */
+        .member-row {
+            display: flex;
+            flex-direction: column;
+            gap: 60px;
+        }
+
+        .bio-card {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            background: var(--card-white);
+            border-radius: 32px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.08);
+            border: 1px solid var(--border-light);
+        }
+
+        /* Profile Side */
+        .profile-side {
+            position: relative;
+            background: #f8fafc;
+            height: 100%;
+        }
+
+        .profile-side img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Info Side */
+        .info-side {
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .role-badge {
+            display: inline-block;
+            background: #e0f2fe;
+            color: var(--accent);
+            padding: 6px 14px;
+            border-radius: 99px;
+            font-size: 0.75rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            width: fit-content;
+        }
+
+        .info-side h2 {
+            font-size: 2.2rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .bio-para {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #475569;
+            margin-bottom: 35px;
+            border-left: 3px solid var(--border-light);
+            padding-left: 25px;
+        }
+
+        /* Email & Contact Section */
+        .contact-action {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            background: #f8fafc;
+            padding: 20px 25px;
+            border-radius: 20px;
+            width: fit-content;
+        }
+
+        .email-label {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: #94a3b8;
+            text-transform: uppercase;
+        }
+
+        .email-link {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: opacity 0.2s;
+        }
+
+        .email-link:hover {
+            opacity: 0.7;
+        }
+
+        @media (max-width: 900px) {
+            .bio-card {
+                grid-template-columns: 1fr;
+            }
+
+            .profile-side {
+                height: 350px;
+            }
+
+            .info-side {
+                padding: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <a href="/index.html"><img src="/assets/images/logo.png" alt="shcra logo"
+                    style="width: 150px; padding-right: 2em;"></a>
+        </div>
+
+        <nav class="nav-links" id="nav-links">
+            <a href="/index.html">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">About ▼</button>
+                <div class="dropdown-content">
+                    <a href="/pages/about/mission.html">Our Mission</a>
+                    <a href="/pages/about/vission.html">Our Vision</a>
+                    <a href="/pages/about/objective.html">Our Objectives</a>
+                </div>
+            </div>
+            <a href="/pages/services.html">Services</a>
+            <a href="/pages/gallery.html">Gallery</a>
+            <a href="/pages/blog/blog.html">Blog</a>
+            <a href="#" class="active">Team</a>
+            <a href="/pages/contact.html">Contact</a>
+            <a href="/pages/donate.html" class="btn-donate">Donate</a>
+        </nav>
+
+        <div class="hamburger" id="hamburger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="team-section">
+            <h2>Meet Our Team</h2>
+            <div class="team-grid">
+                <!-- Team Member Card -->
+                <article class="team-card">
+                    <div class="image-wrapper">
+                        <img src="/assets/images/team-3.jpg" alt="Sarah Chen, Program Director">
+                    </div>
+                    <div class="card-content">
+                        <h3>Mr Lukozi Bulimwengo</h3>
+                        <p class="role">Program Director</p>
+                        <p class="description">With over 20 years in non-profit management, Mr Lukozi oversees our
+                            strategic vision and ensures that every program aligns with our mission of refugee
+                            empowerment and self-help.</p>
+                        <a href="mailto:lukozigodson" class="contact-btn">Contact Mr Lukozi</a>
+                    </div>
+                </article>
+
+                <article class="team-card">
+                    <div class="image-wrapper">
+                        <img src="/assets/images/Team 2.jpeg" alt="Sarah Chen, Program Director">
+                    </div>
+                    <div class="card-content">
+                        <h3>Dr Wiya Leon Masudi</h3>
+                        <p class="role">Secretary</p>
+                        <p class="description">Having worked with the organization for over 10 years, Dr Wiya Léon
+                            Masudi is a specialized researcher affiliated with the
+                            Environmental Biotechnology Rhodes University (EBRU). His work primarily focuses on
+                            bioremediation and the rehabilitation of lands degraded by mining activities, utilizing
+                            consortia of fungi and rhizobacteria.</p>
+                        <a href="mailto:desamunya@gmail.com" class="contact-btn">Contact Dr Wiya</a>
+                    </div>
+                </article>
+
+                <article class="team-card">
+                    <div class="image-wrapper">
+                        <img src="/assets/images/sec.jpeg" alt="Sarah Chen, Program Director">
+                    </div>
+                    <div class="card-content">
+                        <h3>Mrs Ikosi Zaina</h3>
+                        <p class="role">Accountant</p>
+                        <p class="description">Since 2011, Ikosi Zaina has been an integral part of the SHCRA family.
+                            Her professional journey is defined by a commitment to service, having previously worked in
+                            the field of education. An accounting professional by training, Ikosi uses her financial
+                            expertise to support our mission and ensure our continued growth.</p>
+                        <a href="mailto:xagodson@gmail.com" class="contact-btn">Contact Mrs Zaina</a>
+                    </div>
+                </article>
+
+                <article class="team-card">
+                    <div class="image-wrapper">
+                        <img src="/assets/images/bm.jpeg" alt="Sarah Chen, Program Director">
+                    </div>
+                    <div class="card-content">
+                        <h3>Mr Omari Katumbus</h3>
+                        <p class="role">IT Hardware Enginner(Board Member)</p>
+                        <p class="description">Mr Omari is an IT Hardware Engineer and a dedicated Board Member for the Self Help Christian Refugee Association (SHCRA). With a strong background in hardware design and troubleshooting, they bring a unique technical lens to the board, focusing on innovation and vocational empowerment. At SHCRA, Mr Omari is passionate about using technology to bridge the skills gap, helping refugees and local community members achieve peaceful integration and socioeconomic independence.</p>
+                        <a href="mailto:xagodson@gmail.com" class="contact-btn">Contact Mr Omari</a>
+                    </div>
+                </article>
+
+                <article class="team-card">
+                    <div class="image-wrapper">
+                        <img src="/assets/images/sw.jpeg" alt="Sarah Chen, Program Director">
+                    </div>
+                    <div class="card-content">
+                        <h3>Mrs Odia Mbuyi</h3>
+                        <p class="role">Social Worker (Board Member)</p>
+                        <p class="description">Mrs Mbuyi is a professional Social Worker and a Board Member for the Self Help Christian Refugee Association (SHCRA). Bringing a wealth of experience in social welfare and human rights, they advocate for a "people-first" approach to refugee assistance. At SHCRA, Mrs Mbuyi focuses on empowering individuals through holistic social support and training, helping them move from dependency to self-reliance within the South African society.</p>
+                        <a href="mailto:odile2012@hotmail.com" class="contact-btn">Contact Mrs Odia</a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+    <div class="menu-overlay" id="menu-overlay"></div>
+
+    <button id="backToTop" title="Go to top" style="font-size: 1.5rem;">↑</button>
+
+    <a href="https://wa.me/27784251650?text=Hi%20SHCRA,%20I'd%20like%20to%20inquire%20about..." class="whatsapp-float"
+        target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="wa-icon">
+        <span class="wa-tooltip">Chat with us</span>
+    </a>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-section footer-brand">
+                <div class="logo-footer">
+                    <img src="/assets/images/logo.png" alt="shcra logo" style="width: 150px; padding-right: 2em;">
+                </div>
+                <p>Providing essential support and a path to self-sufficiency for South Africans and refugees.</p>
+            </div>
+
+            <div class="footer-section footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="/pages/about/mission.html">About Us</a></li>
+                    <li><a href="/pages/blog/blog.html">Support Programs</a></li>
+                    <li><a href="/pages/contact.html">Volunteer</a></li>
+                    <li><a href="/pages/donate.html">Donate</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Physical Address:</h4>
+                <div class="contact-info">
+                    <p>9 Frances street, Yeovile, Johannesburg, 2198 South Africa</p>
+                </div>
+                <h4>Connect</h4>
+                <div class="contact-info">
+                    <p style="margin-bottom: 2em;">Cell: +27 78 425 1650</p>
+                    <p>Email: infoshcra.org@gmail.com</p>
+                </div>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/profile.php?id=61575988463472" class="social-btn"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/shcra_2000/" class="social-btn"><i class="fab fa-instagram"></i>
+                        <a href="https://www.x.com/SHCRA2000" class="social-btn"><i class="fab fa-x"></i></a>
+                        <a href="https://www.youtube.com/@SelfHelpChristianRefugeesAssoc" class="social-btn"><i
+                                class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            &copy; 2026 Self-Help Christian Refugee Association. All rights reserved.
+        </div>
+    </footer>
+
+    <!--javascript-->
+    <script src="/assets/js/script.js"></script>
+</body>
+
+</html>

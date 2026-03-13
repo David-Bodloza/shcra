@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHCRA | News & Updates</title>
+
+    <!--Favicon-->
+    <link rel="icon" type="image/png" href="/assets/images/favicon.ico">
+
+    <!--Touch icon-->
+    <link rel="apple-touch-icon" href="/assets/images/touch.png">
+
+    <!--Font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!--css-->
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <style>
+        :root {
+            --brand-blue: #1a4a8e;
+            --brand-gold: darkred;
+            --bg-light: #f4f7f6;
+            --text-main: #333;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: var(--bg-light);
+            margin: 0;
+            color: var(--text-main);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* FILTER BUTTONS */
+        .filter-container {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .filter-btn {
+            background: white;
+            border: 2px solid var(--brand-blue);
+            color: var(--brand-blue);
+            padding: 8px 25px;
+            margin: 5px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .filter-btn.active,
+        .filter-btn:hover {
+            background: var(--brand-blue);
+            color: white;
+        }
+
+        /* MAIN LAYOUT GRID */
+        .blog-wrapper {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            /* 2 parts blog, 1 part sidebar */
+            gap: 40px;
+        }
+
+        /* BLOG CARDS */
+        .blog-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .blog-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .blog-content {
+            padding: 25px;
+        }
+
+        .category-tag {
+            color: var(--brand-gold);
+            font-weight: 700;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+        }
+
+        .blog-content h2 {
+            margin: 10px 0;
+            color: var(--brand-blue);
+        }
+
+        .read-more {
+            color: var(--brand-blue);
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-block;
+            margin-top: 15px;
+        }
+
+        .read-more:hover {
+            text-decoration: underline;
+        }
+
+        /* SIDEBAR */
+        .sidebar {
+            position: sticky;
+            top: 100px;
+            height: fit-content;
+        }
+
+        .sidebar-widget {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .sidebar-widget h3 {
+            border-bottom: 2px solid var(--brand-gold);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            color: var(--brand-blue);
+        }
+
+        .update-item {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .update-date {
+            font-size: 0.75rem;
+            color: #888;
+            display: block;
+        }
+
+        .update-text {
+            font-size: 0.95rem;
+            color: #444;
+            text-decoration: none;
+        }
+
+        .update-text:hover {
+            color: var(--brand-gold);
+        }
+
+        /* Animation for filtering cards */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Enhancing the sidebar updates */
+        .update-item {
+            transition: background 0.2s ease, padding-left 0.2s ease;
+        }
+
+        .update-item:hover {
+            background: #fdfdfd;
+            padding-left: 5px;
+            border-left: 3px solid var(--brand-gold);
+        }
+
+        /* MOBILE RESPONSIVENESS */
+        @media (max-width: 900px) {
+            .blog-wrapper {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <a href="/index.html"><img src="/assets/images/logo.png" alt="shcra logo"
+                    style="width: 150px; padding-right: 2em;"></a>
+        </div>
+
+        <nav class="nav-links" id="nav-links">
+            <a href="/index.html">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">About ▼</button>
+                <div class="dropdown-content">
+                    <a href="/pages/about/mission.html">Our Mission</a>
+                    <a href="/pages/about/vission.html">Our Vission</a>
+                    <a href="/pages/about/objective.html">Our Objectives</a>
+                </div>
+            </div>
+            <a href="/pages/services.html">Services</a>
+            <a href="/pages/gallery.html">Gallery</a>
+            <a href="/pages/blog/blog.html" class="active">Blog</a>
+            <a href="/pages/team.html">Team</a>
+            <a href="/pages/contact.html">Contact</a>
+            <a href="/pages/donate.html" class="btn-donate">Donate</a>
+        </nav>
+
+        <div class="hamburger" id="hamburger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="filter-container">
+            <button class="filter-btn active">All</button>
+            <button class="filter-btn">Programs</button>
+            <button class="filter-btn">Events</button>
+            <button class="filter-btn">Activities</button>
+        </div>
+
+        <div class="blog-wrapper">
+            <main>
+                <article class="blog-card" data-category="Programs">
+                    <img src="/assets/images/event-1.jpg" alt="Activity 1" class="blog-img">
+                    <div class="blog-content">
+                        <span class="category-tag">Programs</span>
+                        <h2>Celebrating the Spirit of Giving: Highlights from the 2012 Inyathelo Philanthropy Awards
+                        </h2>
+                        <p>In November 2012, the heart of Sandton beat with a different kind of energy as some of
+                            Africa’s most selfless individuals gathered at The Campus for the annual Inyathelo
+                            Philanthropy Awards. This prestigious event, held for the first time in Johannesburg in
+                            partnership with the African Grantmakers Network (AGN), moved beyond the boardroom to
+                            celebrate the transformative power of personal giving...</p>
+                        <a href="/pages/blog/posts/post-1.html" class="read-more"
+                            style="color: whitesmoke; text-decoration: none;">Read More
+                            →</a>
+                    </div>
+                </article>
+
+                <article class="blog-card" data-category="Events">
+                    <img src="/assets/images/hero-1.JPG" alt="Cultural Day" class="blog-img">
+                    <div class="blog-content">
+                        <span class="category-tag">Events</span>
+                        <h2>A Day of Joy and Community: Sheik Anta Diop School </h2>
+                        <p>In 2012, as part of our ongoing commitment to grassroots philanthropy and educational
+                            support, Inyathelo visited Bez Valley Primary School. This wasn't just another official site
+                            visit; it was a vibrant celebration of the energy and potential within our local schools.
+                        </p>
+                        <a href="/pages/blog/posts/post-2.html" class="read-more"
+                            style="color: whitesmoke; text-decoration: none;">Read More →</a>
+                    </div>
+                </article>
+
+                <article class="blog-card" data-category="Activities">
+                    <img src="/assets/images/activity-2.JPG" alt="Cultural Day" class="blog-img">
+                    <div class="blog-content">
+                        <span class="category-tag">Activities</span>
+                        <h2>More Than a Game: Building Teamwork at Sheik Anta Diop primary school.</h2>
+                        <p>Continuing our memorable 2012 visit to Sheik Anta Diop Primary School, the spirit of
+                            philanthropy
+                            took a playful turn on the soccer field. This "garden of growth" wasn't just for plants—it
+                            was for the children’s potential.</p>
+                        <a href="/pages/blog/posts/post-3.html" class="read-more"
+                            style="color: whitesmoke; text-decoration: none;">Read More →</a>
+                    </div>
+                </article>
+            </main>
+
+            <aside class="sidebar">
+                <div class="sidebar-widget">
+                    <h3>Latest News</h3>
+
+                    <div class="update-item">
+                        <span class="update-date">Feb 14, 2026</span>
+                        <a href="/pages/blog/updates/update-1.html" class="update-text">Valentine’s Day: A Celebration
+                            of Love, Connection, and Community</a>
+                    </div>
+
+
+                </div>
+            </aside>
+        </div>
+    </div>
+
+
+    <div class="menu-overlay" id="menu-overlay"></div>
+
+    <button id="backToTop" title="Go to top" style="font-size: 1.5rem;">↑</button>
+
+    <a href="https://wa.me/27784251650?text=Hi%20SHCRA,%20I'd%20like%20to%20inquire%20about..." class="whatsapp-float"
+        target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="wa-icon">
+        <span class="wa-tooltip">Chat with us</span>
+    </a>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-section footer-brand">
+                <div class="logo-footer">
+                    <img src="/assets/images/logo.png" alt="shcra logo" style="width: 150px; padding-right: 2em;">
+                </div>
+                <p>Providing essential support and a path to self-sufficiency for South Africans and refugees.</p>
+            </div>
+
+            <div class="footer-section footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="/pages/about/mission.html">About Us</a></li>
+                    <li><a href="/pages/blog/blog.html">Support Programs</a></li>
+                    <li><a href="/pages/contact.html">Volunteer</a></li>
+                    <li><a href="/pages/donate.html">Donate</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Physical Address:</h4>
+                <div class="contact-info">
+                    <p>9 Frances street, Yeovile, Johannesburg, 2198 South Africa</p>
+                </div>
+                <h4>Connect</h4>
+                <div class="contact-info">
+                    <p style="margin-bottom: 2em;">Cell: +27 78 425 1650</p>
+                    <p>Email: infoshcra.org@gmail.com</p>
+                </div>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/profile.php?id=61575988463472" class="social-btn"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/shcra_2000/" class="social-btn"><i class="fab fa-instagram"></i>
+                        <a href="https://www.x.com/SHCRA2000" class="social-btn"><i class="fab fa-x"></i></a>
+                        <a href="https://www.youtube.com/@SelfHelpChristianRefugeesAssoc" class="social-btn"><i
+                                class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            &copy; 2026 Self-Help Christian Refugee Association. All rights reserved.
+        </div>
+    </footer>
+
+    <!--javascript-->
+    <script src="/assets/js/script.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const blogCards = document.querySelectorAll('.blog-card');
+
+            // FILTER LOGIC
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Update button styles
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+
+                    const filterValue = btn.textContent;
+
+                    blogCards.forEach(card => {
+                        const category = card.getAttribute('data-category');
+
+                        if (filterValue === 'All' || category === filterValue) {
+                            card.style.display = 'flex';
+                            // Optional: Add an entrance animation
+                            card.style.animation = 'fadeIn 0.5s ease forwards';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // SIDEBAR INTERACTION
+            // This makes the sidebar items "glow" when hovered to show they are clickable
+            const updateItems = document.querySelectorAll('.update-item');
+            updateItems.forEach(item => {
+                item.style.cursor = 'pointer';
+                item.addEventListener('click', () => {
+                    const link = item.querySelector('a').getAttribute('href');
+                    window.location.href = link;
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

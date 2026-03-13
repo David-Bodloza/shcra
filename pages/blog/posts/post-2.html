@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHCRA | Event Details</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <style>
+        :root {
+            --brand-blue: #1a4a8e;
+            --brand-gold: darkred;
+            --event-red: green;
+            /* For urgent/important event info */
+            --bg-light: #fdfdfd;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            background-color: var(--bg-light);
+            color: #333;
+        }
+
+        /* EVENT HERO */
+        .event-hero {
+            position: relative;
+            height: 50vh;
+            background: url('/assets/images/hero-1.jpg') center/cover no-repeat;
+            display: flex;
+            align-items: flex-end;
+            padding: 10%;
+            z-index: 2;
+        }
+
+        .event-hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+        }
+
+        .hero-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            width: 100%;
+            padding: 0 20px;
+            z-index: 2;
+            color: white;
+        }
+
+        .event-date-badge {
+            background: var(--brand-gold);
+            padding: 8px 20px;
+            border-radius: 5px;
+            font-weight: 800;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        /* LAYOUT GRID */
+        .content-grid {
+            max-width: 1100px;
+            margin: 40px auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 50px;
+            padding: 0 20px;
+        }
+
+        /* LEFT SIDE: DETAILS */
+        .event-description h2 {
+            color: var(--brand-blue);
+            font-size: 2rem;
+        }
+
+        h3 {
+            margin-bottom: 1em;
+            border-bottom: 2px solid red;
+
+        }
+
+        .schedule-box {
+            background: #f8fafd;
+            border-left: 5px solid var(--brand-blue);
+            padding: 20px;
+            margin: 30px 0;
+            line-height: 2;
+
+        }
+
+        /* RIGHT SIDE: TICKETS/RSVP CARD */
+        .rsvp-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 100px;
+            height: fit-content;
+        }
+
+        .info-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .info-row i {
+            color: var(--brand-gold);
+            width: 30px;
+            font-size: 1.3rem;
+        }
+
+        .btn-rsvp {
+            display: block;
+            width: 100%;
+            background: var(--brand-blue);
+            color: white;
+            text-align: center;
+            padding: 15px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-rsvp:hover {
+            background: var(--brand-gold);
+        }
+
+        /* MAP PLACEHOLDER */
+        .map-box {
+            width: 100%;
+            height: 200px;
+            background: #eee;
+            border-radius: 8px;
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #888;
+        }
+
+        @media (max-width: 850px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .event-hero {
+                height: 40vh;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <a href="/index.html"><img src="/assets/images/logo.png" alt="shcra logo"
+                    style="width: 150px; padding-right: 2em;"></a>
+        </div>
+
+        <nav class="nav-links" id="nav-links">
+            <a href="/index.html" class="active">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">About ▼</button>
+                <div class="dropdown-content">
+                    <a href="/pages/about/mission.html">Our Mission</a>
+                    <a href="/pages/about/vission.html">Our Vision</a>
+                    <a href="/pages/about/objective.html">Our Objectives</a>
+                </div>
+            </div>
+            <a href="/pages/services.html">Services</a>
+            <a href="/pages/gallery.html">Gallery</a>
+            <a href="/pages/blog/blog.html">Blog</a>
+            <a href="/pages/team.html">Team</a>
+            <a href="/pages/contact.html">Contact</a>
+            <a href="/pages/donate.html" class="btn-donate">Donate</a>
+        </nav>
+
+        <div class="hamburger" id="hamburger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </header>
+
+
+    <section class="event-hero">
+        <div class="hero-container">
+            <div class="event-date-badge">MARCH 2018</div>
+            <h1>The Power of Play and Participation.</h1>
+            <p>In 2012, as part of our ongoing commitment to grassroots philanthropy and educational support, Inyathelo
+                visited Sheik Anta Diop college. This wasn't just another official site visit; it was a vibrant
+                celebration of the energy and potential within our local schools..</p>
+        </div>
+    </section>
+
+    <div class="content-grid">
+        <main class="event-description">
+            <h2>About the Event</h2>
+            <p style="line-height: 1.5;">The playground was transformed as students from across the grades came together
+                for a day of interactive activities and shared learning. Whether it was through song, dance, or
+                organized games, the focus remained on building a sense of belonging and pride within the school
+                community</p>
+
+
+
+            <div class="schedule-box">
+                <h3 style="border-bottom: 2px solid var(--brand-blue);">Why Schools Like Sheik Anta Diop Matter</h3>
+                <p><strong>» Foster Leadership:</strong> Encouraging students to take an active role in their school
+                    culture..</p>
+                <p><strong>» Strengthen Bonds:</strong> Connecting the school more deeply with local community
+                    resources..</p>
+                <p><strong>» Celebrate Achievement:</strong> Recognizing the hard work of teachers and students alike in
+                    a joyful, informal setting. </p>
+            </div>
+
+            <h3>Looking Back to Move Forward</h3>
+            <p style="line-height: 1.4;">Reflecting on this 2012 event reminds us of the lasting impact that a single
+                day of focused attention and community spirit can have. We remain inspired by the smiles of the Sheik
+                Anta Diop learners and continue to advocate for every child's right to a vibrant, supportive, and
+                well-resourced educational journey.?</p>
+        </main>
+
+        <aside class="event-sidebar">
+            <div class="rsvp-card">
+                <div class="info-row">
+                    <span><strong>Location:</strong><br>Grafton, Yeovile</span>
+                </div>
+                <div class="info-row">
+                    <span><strong>Time:</strong><br>10:00 AM - 3:00 PM</span>
+                </div>
+                <div class="info-row">
+                    <span><strong>Admission:</strong><br>Free (Registration)</span>
+                </div>
+
+                <button class="btn-rsvp"><a style="color: #f8fafd; text-decoration: none;"
+                        href="mailto:infoshcra.org@gmail.com?subject=Activity%20Registration:%Program%20One&body=Hi%20SHCRA%20Team,%0D%0A%0D%0AI%20would%20like%20to%20register%20for%20the%20Program%20One.%0D%0A%0D%0AFull%20Name:%20%0D%0APreferred%20Day%20(Tue/Thu):%20%0D%0APhone%20Number:%20%0D%0A%0D%0AThank%20you!"
+                        class="btn-join">
+                        Contact Organiser
+                    </a></button>
+
+
+                <p style="font-size: 0.8rem; color: #999; text-align: center; margin-top: 15px;">
+                    Questions? <a href="/pages/contact.html" style="color: var(--brand-blue);">Contact Event Team</a>
+                </p>
+
+                <div style="margin-top: 2em;">
+                    <a href="/pages/blog/blog.html" style="font-weight: 700; text-decoration: none;">← Back to Blog</a>
+                </div>
+            </div>
+
+        </aside>
+    </div>
+
+    <!--Overlay toggler-->
+    <div class="menu-overlay" id="menu-overlay"></div>
+
+    <!--Back to top-->
+    <button id="backToTop" title="Go to top" style="font-size: 1.5rem;">↑</button>
+
+    <a href="https://wa.me/27784251650?text=Hi%20SHCRA,%20I'd%20like%20to%20inquire%20about..." class="whatsapp-float"
+        target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="wa-icon">
+        <span class="wa-tooltip">Chat with us</span>
+    </a>
+
+
+    <!--Js-->
+    <script src="/assets/js/script.js"></script>
+
+</body>
+
+</html>

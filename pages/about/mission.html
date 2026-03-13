@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHCRA | Home</title>
+
+    <!--Favicon-->
+    <link rel="icon" type="image/png" href="/assets/images/favicon.ico">
+
+    <!--Touchicon-->
+    <link rel="apple-touch-icon" href="/assets/images/touch.png">
+
+    <!--Fontawesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!--css-->
+    <link rel="stylesheet" href="/assets/css/styles.css">
+
+    <style>
+        /*CTA Baneer*/
+
+        .cta-banner {
+            background-color: darkslategrey;
+            padding: 60px 5%;
+            color: white;
+            margin-bottom: -2rem;
+        }
+
+        .cta-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            margin-bottom: 0px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .cta-text h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .cta-text p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .btn-outline {
+            display: inline-block;
+            padding: 15px 35px;
+            border: 2px solid orange;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+            /* Prevents text wrapping on the button */
+        }
+
+        .btn-outline:hover {
+            background: var(--accent);
+            color: white;
+            border: none;
+        }
+
+        /* Responsive CTA */
+        @media screen and (max-width: 768px) {
+            .cta-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .cta-text h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <a href="/index.html"><img src="/assets/images/logo.png" alt="shcra logo"
+                    style="width: 150px; padding-right: 2em;"></a>
+        </div>
+
+        <nav class="nav-links" id="nav-links">
+            <a href="/index.html">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">About ▼</button>
+                <div class="dropdown-content">
+                    <a href="#" class="active">Our Mission</a>
+                    <a href="/pages/about/vission.html">Our Vision</a>
+                    <a href="/pages/about/objective.html">Our Objectives</a>
+                </div>
+            </div>
+            <a href="/pages/services.html">Services</a>
+            <a href="/pages/gallery.html">Gallery</a>
+            <a href="/pages/blog/blog.html">Blog</a>
+            <a href="/pages/team.html">Team</a>
+            <a href="/pages/contact.html">Contact</a>
+            <a href="/pages/donate.html" class="btn-donate">Donate</a>
+        </nav>
+
+        <div class="hamburger" id="hamburger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </header>
+
+    <main>
+        <section class="mission" id="mission">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Our Core Mission</h2>
+                    <div class="underline"></div>
+                    <p> to assist, train and inform refugees and local community members so that they become
+                        self-sufficient.</p>
+                </div>
+
+                <div class="mission-grid">
+                    <div class="mission-card">
+                        <div class="icon-box">🏠</div>
+                        <h3>Safe Housing</h3>
+                        <p>Ensuring every family has a secure, dignified place to call home during their transition.</p>
+                    </div>
+
+                    <div class="mission-card">
+                        <div class="icon-box">📚</div>
+                        <h3>Education & Skills</h3>
+                        <p>Providing language classes and vocational training to foster long-term independence.</p>
+                    </div>
+
+                    <div class="mission-card">
+                        <div class="icon-box">🙏</div>
+                        <h3>Spiritual Support</h3>
+                        <p>Offering a compassionate community and faith-based counseling for emotional healing.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-banner">
+            <div class="cta-container">
+                <div class="cta-text">
+                    <h2>Ready to make a difference?</h2>
+                    <p>Join our global network of volunteers and help us welcome those seeking a new beginning.</p>
+                </div>
+                <div class="cta-action">
+                    <a href="/pages/team.html" class="btn-outline">Become a Volunteer</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <div class="menu-overlay" id="menu-overlay"></div>
+
+    <button id="backToTop" title="Go to top" style="font-size: 1.5rem;">↑</button>
+
+    <a href="https://wa.me/27784251650?text=Hi%20SHCRA,%20I'd%20like%20to%20inquire%20about..." class="whatsapp-float"
+        target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="wa-icon">
+        <span class="wa-tooltip">Chat with us</span>
+    </a>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-section footer-brand">
+                <div class="logo-footer">
+                    <img src="/assets/images/logo.png" alt="shcra logo" style="width: 150px; padding-right: 2em;">
+                </div>
+                <p>Providing essential support and a path to self-sufficiency for South Africans and refugees.</p>
+            </div>
+
+            <div class="footer-section footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="/pages/about/mission.html">About Us</a></li>
+                    <li><a href="/pages/blog/blog.html">Support Programs</a></li>
+                    <li><a href="/pages/contact.html">Volunteer</a></li>
+                    <li><a href="/pages/donate.html">Donate</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Physical Address:</h4>
+                <div class="contact-info">
+                    <p>9 Frances street, Yeovile, Johannesburg, 2198 South Africa</p>
+                </div>
+                <h4>Connect</h4>
+                <div class="contact-info">
+                    <p style="margin-bottom: 2em;">Cell: +27 78 425 1650</p>
+                    <p>Email: infoshcra.org@gmail.com</p>
+                </div>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/profile.php?id=61575988463472" class="social-btn"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/shcra_2000/" class="social-btn"><i class="fab fa-instagram"></i>
+                        <a href="https://www.x.com/SHCRA2000" class="social-btn"><i class="fab fa-x"></i></a>
+                        <a href="https://www.youtube.com/@SelfHelpChristianRefugeesAssoc" class="social-btn"><i
+                                class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            &copy; 2026 Self-Help Christian Refugee Association. All rights reserved.
+        </div>
+    </footer>
+
+    <!--javascript-->
+    <script src="/assets/js/script.js"></script>
+</body>
+
+</html>

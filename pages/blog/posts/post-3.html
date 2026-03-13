@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHCRA | Activity Details</title>
+
+    <!--css-->
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <style>
+        :root {
+            --brand-blue: #1a4a8e;
+            --brand-gold: darkred;
+            --activity-green: #27ae60;
+            --bg-light: #f4f7f6;
+        }
+
+
+        /* HEADER SECTION */
+        .activity-header {
+            background: white;
+            padding: 60px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .breadcrumb {
+            font-size: 0.9rem;
+            color: #888;
+            margin-bottom: 20px;
+        }
+
+        .activity-title {
+            font-size: 3rem;
+            color: var(--brand-blue);
+            margin: 0;
+        }
+
+        .activity-meta {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .meta-tag {
+            background: #eef2f7;
+            padding: 5px 15px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--brand-blue);
+        }
+
+        /* CONTENT GRID */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 50px;
+            margin: 40px auto;
+        }
+
+        /* WHAT TO EXPECT SECTION */
+        .activity-body h2 {
+            color: var(--brand-blue);
+            font-size: 1.8rem;
+            margin-top: 2em;
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .feature-list li {
+            padding: 15px;
+            background: white;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        .feature-list li::before {
+            content: '→';
+            color: var(--brand-gold);
+            margin-right: 15px;
+            font-weight: bold;
+        }
+
+        /* SIDEBAR CARD */
+        .registration-box {
+            background: var(--brand-blue);
+            color: white;
+            padding: 35px;
+            border-radius: 15px;
+            position: sticky;
+            top: 40px;
+        }
+
+        .registration-box h3 {
+            color: var(--brand-gold);
+            margin-top: 0;
+        }
+
+        .checklist {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .checklist h4 {
+            margin-top: 0;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .checklist ul {
+            padding-left: 20px;
+            margin: 0;
+            font-size: 0.95rem;
+        }
+
+        .btn-join {
+            display: block;
+            width: 100%;
+            background: var(--brand-gold);
+            color: white;
+            text-align: center;
+            padding: 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn-join:hover {
+            filter: brightness(1.1);
+        }
+
+        @media (max-width: 800px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .activity-title {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="navbar">
+          <div class="logo">
+            <a href="/index.html"><img src="/assets/images/logo.png" alt="shcra logo" style="width: 150px; padding-right: 2em;"></a>
+        </div>
+
+        <nav class="nav-links" id="nav-links">
+            <a href="/index.html" class="active">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">About ▼</button>
+                <div class="dropdown-content">
+                    <a href="/pages/about/mission.html">Our Mission</a>
+                    <a href="/pages/about/vission.html">Our Vision</a>
+                    <a href="/pages/about/objective.html">Our Objectives</a>
+                </div>
+            </div>
+            <a href="/pages/services.html">Services</a>
+            <a href="/pages/gallery.html">Gallery</a>
+            <a href="/pages/blog/blog.html">Blog</a>
+            <a href="/pages/team.html">Team</a>
+            <a href="/pages/contact.html">Contact</a>
+            <a href="/pages/donate.html" class="btn-donate">Donate</a>
+        </nav>
+
+        <div class="hamburger" id="hamburger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </header>
+
+
+    <section class="activity-header">
+        <div class="container">
+
+            <h1 class="activity-title">The Value of Active Play</h1>
+            <div class="activity-meta">
+                <span class="meta-tag"><strong>Encourage Discipline:</strong> Teaching the importance of rules, practice, and perseverance.</span>
+                <span class="meta-tag"><strong>Build Confidence: </strong>Giving every child a chance to shine and be part of a winning team</span>
+                <span class="meta-tag"><strong>Strengthen Community:</strong> Using sports as a universal language to bring students together across different backgrounds</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="container content-grid">
+        <main class="activity-body">
+            <h2>Overview</h2>
+            <p style="line-height: 1.5;">The highlight of the day was an interactive sports session where students swapped their pens for a soccer ball. Guided by local mentors, the children learned that teamwork on the field translates to collaboration in the classroom and the community.</p>
+
+
+
+            <h2 style="margin-top: 2em;">What to Expect</h2>
+            <ul class="feature-list">
+                <li><strong>Active Engagement:</strong>  This is not a "sit and listen" event. Expect high-energy drills, friendly matches, and hands-on coaching..</li>
+                <li><strong>Skill Development:</strong>  Beyond soccer techniques, students will practice communication, strategic thinking, and mutual respect.</li>
+                <li><strong>Mentorship:</strong>  Access to positive role models who demonstrate how discipline and a positive attitude lead to success.</li>
+                <li><strong>Inclusive Fun:</strong>  An environment where every child, regardless of skill level, is encouraged to participate and feel part of the team.</li>
+            </ul>
+
+            <h2>A Legacy of Support</h2>
+            <p>Reflecting on 2012 reminds us that small interventions—like a new soccer ball or an afternoon of guided play—leave a lasting impression. At Bez Valley Primary, we didn't just see a game; we saw the future of South Africa’s vibrant democracy in action.</p>
+        </main>
+
+        <aside class="sidebar">
+            <div class="registration-box">
+                <h3>Join the Workshop</h3>
+                <p>Are you ready to be part of the action? Whether you are a student looking to sharpen your skills or a community member wanting to support our youth, we invite you to join the workshop</p>
+
+                <div class="checklist">
+                    <h4>What to Bring:</h4>
+                    <ul>
+                        <li>Soccer boots</li>
+                        <li>Sports attire</li>
+                        <li>A positive attitude</li>
+                    </ul>
+                </div>
+
+                <div style="margin-bottom: 25px;">
+                    <strong>Cost:</strong>  FREE.<br>
+                    <strong>Location:</strong> 9 Frances, Yeoville
+                </div>
+
+                <a href="mailto:infoshcra.org@gmail.com?subject=Activity%20Registration:%20Activity%20One&body=Hi%20SHCRA%20Team,%0D%0A%0D%0AI%20would%20like%20to%20register%20for%20the%20Activity%20One.%0D%0A%0D%0AFull%20Name:%20%0D%0APreferred%20Day%20(Tue/Thu):%20%0D%0APhone%20Number:%20%0D%0A%0D%0AThank%20you!"
+                    class="btn-join">
+                    Register via Email
+                </a>
+            </div>
+
+            
+        </aside>
+        <div class="breadcrumb" style=" margin: 2em;"><a href="/pages/blog/blog.html"
+                    style="text-decoration: none; font-weight: bold;font-size: 1rem;">← Back to
+                    Blog</a>
+            </div>
+    </div>
+
+
+    <!--Overlay toggler-->
+    <div class="menu-overlay" id="menu-overlay"></div>
+
+    <!--Back to top-->
+    <button id="backToTop" title="Go to top" style="font-size: 1.5rem;">↑</button>
+
+    <a href="https://wa.me/27784251650?text=Hi%20SHCRA,%20I'd%20like%20to%20inquire%20about..." class="whatsapp-float"
+        target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="wa-icon">
+        <span class="wa-tooltip">Chat with us</span>
+    </a>
+
+
+    <!--js-->
+    <script src="/assets/js/script.js"></script>
+
+</body>
+
+</html>
